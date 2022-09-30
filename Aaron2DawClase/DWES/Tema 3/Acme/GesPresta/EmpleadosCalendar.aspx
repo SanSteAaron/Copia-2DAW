@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Empleados.aspx.cs" Inherits="GesPresta.Empleados" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EmpleadosCalendar.aspx.cs" Inherits="GesPresta.EmpleadosCalendar" %>
 
 <%@ Register Src="~/Cabecera.ascx" TagPrefix="uc1" TagName="Cabecera" %>
 
@@ -66,9 +66,14 @@
             </div>
                 <br />
                 <div class="DivFormEnviar">
-                    <asp:Button ID="cdmEnviar" Text="Enviar"  runat="server" />
-                </div> 
-            </div>
+                    <asp:Button ID="cdmEnviar" Text="Enviar"  runat="server" OnClick="cdmEnviar_Click" />
+                </div>                
+                <br />
+                <br />
+                <div class="DivFormLabel">
+                    <asp:Label ID="lblValores" runat="server" Visible="false" BackColor="#66FFFF" Width="60%"></asp:Label>
+                </div>
+        </div>
     </form>
 </body>
 </html>

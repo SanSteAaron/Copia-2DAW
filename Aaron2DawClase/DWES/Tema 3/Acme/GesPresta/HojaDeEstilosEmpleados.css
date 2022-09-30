@@ -1,21 +1,19 @@
-﻿div{
-    text-align:center;
+﻿
+.Titulo {
+    text-align: center;
 }
-div p{
+
+.DivFormLabel {
+    text-align: center;
+}
+
+.DivFormEnviar {
+    text-align: center;
+}
+
+.Texto{
     text-align:right;
-}
-#DivFormText{
-    float:left;
     width:30%;
-}
-#DivForm{
-    text-align:left;
-    float:right;
-    width:67%;
-}
-.aspForms{
-    margin-bottom:1.1%;
-}
-#DivFormText p {
-    margin-bottom: 3.1%;
+    margin-right:3%;
+    float:left;
 }

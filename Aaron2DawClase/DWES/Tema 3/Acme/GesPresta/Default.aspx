@@ -15,15 +15,15 @@
             <uc1:Cabecera ID="Cabecera1" runat="server" />
         </div>
         <div>
-            <p id="pDefault">
+            <p class="pDefault">
             La corporación ACME está comprometida con sus empleados. Para ello ha establecido una serie de prestaciones que pueden utilizar sus empleados para obtener ayudas sociales asociados a diversos gastos de tipo familiar, médico, etc.
             </p>    
             <br />
-            <p id="pDefault">
+            <p class="pDefault">
             Esta aplicación a través de Web permite realizar todas las tareas de gestión relacionadas con la prestación de ayudas a los empleados.
             </p>    
             <br />
-            <p id="pDefault">
+            <p class="pDefault">
             Para cualquier duda o consulta puede contactar con el Departamento de Ayuda Social: <asp:LinkButton ID="LinkAyudaS" runat="server">ayuda.social@acme.com</asp:LinkButton>
             </p>
         </div>
@@ -31,7 +31,7 @@
 </body>
 </html>
 <style>
-    #pDefault{
+    .pDefault{
         text-align:left;
     }
 </style>

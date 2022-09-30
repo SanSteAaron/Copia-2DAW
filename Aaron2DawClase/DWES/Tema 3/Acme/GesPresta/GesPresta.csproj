@@ -69,12 +69,16 @@
   <ItemGroup>
     <Content Include="Cabecera.ascx" />
     <Content Include="Default.aspx" />
+    <Content Include="EmpleadosCalendar.aspx" />
     <Content Include="Empleados1.aspx" />
     <Content Include="Empleados.aspx" />
+    <Content Include="HojaDeEstilosCabecera.css" />
     <Content Include="HojaDeEstilosEmpleados.css" />
+    <Content Include="HojaDeEstilosPre1Respuesta.css" />
     <Content Include="HojaDeEstilosPrestaciones.css" />
     <Content Include="Prestaciones1.aspx" />
     <Content Include="Prestaciones.aspx" />
+    <Content Include="Prestaciones1Respuesta.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +95,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadosCalendar.aspx.cs">
+      <DependentUpon>EmpleadosCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpleadosCalendar.aspx.designer.cs">
+      <DependentUpon>EmpleadosCalendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Empleados1.aspx.cs">
       <DependentUpon>Empleados1.aspx</DependentUpon>
@@ -119,6 +130,13 @@
     </Compile>
     <Compile Include="Prestaciones.aspx.designer.cs">
       <DependentUpon>Prestaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestaciones1Respuesta.aspx.cs">
+      <DependentUpon>Prestaciones1Respuesta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestaciones1Respuesta.aspx.designer.cs">
+      <DependentUpon>Prestaciones1Respuesta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
