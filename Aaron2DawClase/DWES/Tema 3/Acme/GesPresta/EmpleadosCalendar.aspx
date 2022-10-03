@@ -41,14 +41,6 @@
                 <asp:TextBox class="aspForms" ID="txtTelEmp" runat="server"></asp:TextBox>
             </div>
             <div>
-                <div class="Texto">Fecha de Nacimiento</div>    
-                <asp:TextBox class="aspForms" ID="txtFnaEmp" runat="server"></asp:TextBox>
-            </div>
-            <div>
-                <div class="Texto">Fecha de ingreso</div>
-                <asp:TextBox class="aspForms" ID="txtFinEmp" runat="server"></asp:TextBox>
-            </div>
-            <div>
                 <div class="Texto">Sexo</div>
                 <asp:RadioButtonList ID="rblSexEmp" runat="server" RepeatDirection="Horizontal">
                     <asp:ListItem Value="M">Mujer</asp:ListItem>
@@ -64,7 +56,43 @@
                     <asp:ListItem Value="Administración">Administración</asp:ListItem>
                 </asp:DropDownList>
             </div>
-                <br />
+            <br />
+            <br />
+            <div class="Fechas">
+                <div class="TextoCal">Fecha de Nacimiento</div>    
+                <asp:TextBox class="aspForms" ID="txtFnaEmp" runat="server"></asp:TextBox>
+            </div>
+            <div class="Fechas">
+                <div class="TextoCal">Fecha de ingreso</div>
+                <asp:TextBox class="aspForms" ID="txtFinEmp" runat="server"></asp:TextBox>
+            </div>
+            <br />
+            <div class="Calendario">
+                <asp:Calendar ID="CalNacimiento" runat="server" OnSelectionChanged="CalNacimiento_SelectionChanged"></asp:Calendar>
+            </div>
+            <div class="Calendario">
+                <asp:Calendar ID="CalIngreso" runat="server" OnSelectionChanged="CalIngreso_SelectionChanged"></asp:Calendar>
+            </div>
+            <div class="Antigüedad">
+                <div class="ContAnt">
+                    <div>Antigüedad:</div>
+                </div>
+                <div>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <div class="TextoAnt">Años</div>
+                </div>
+                <div>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <div class="TextoAnt">Meses</div>
+                </div>
+                <div>
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <div class="TextoAnt">Días</div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
                 <div class="DivFormEnviar">
                     <asp:Button ID="cdmEnviar" Text="Enviar"  runat="server" OnClick="cdmEnviar_Click" />
                 </div>                

@@ -29,5 +29,28 @@ namespace GesPresta
             "<br/> Sexo: " + rblSexEmp.SelectedItem.Value +
             "<br/> Departamento: " + ddlDepEmp.Text;
         }
+
+        public bool ComprobarFechas(string FNacimiento,string FIngreso,string FHoy)
+        {
+            bool comprobar = true;
+            DateTime nacimiento = Convert.ToDateTime(FNacimiento);
+            DateTime ingreso = Convert.ToDateTime(FIngreso);
+            DateTime hoy = Convert.ToDateTime(FHoy);
+        }
+
+        protected void CalNacimiento_SelectionChanged(object sender, EventArgs e)
+        {
+            string nacimiento = CalNacimiento.SelectedDate.ToShortDateString();
+            txtFnaEmp.Text = nacimiento;
+        }
+
+        protected void CalIngreso_SelectionChanged(object sender, EventArgs e)
+        {
+            DateTime dthoy = System.DateTime.Now;
+            string hoy = dthoy.ToShortDateString();
+            string nacimiento = CalNacimiento.SelectedDate.ToShortDateString();
+            string ingreso = CalIngreso.SelectedDate.ToShortDateString();
+            txtFinEmp.Text = ingreso;
+        }
     }
 }
