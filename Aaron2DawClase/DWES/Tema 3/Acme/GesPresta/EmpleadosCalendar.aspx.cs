@@ -30,18 +30,42 @@ namespace GesPresta
             "<br/> Departamento: " + ddlDepEmp.Text;
         }
 
-        public bool ComprobarFechas(string FNacimiento,string FIngreso,string FHoy)
+        public bool ComprobarFechas(string FNacimiento,string FIngreso)
         {
-            bool comprobar = true;
-            DateTime nacimiento = Convert.ToDateTime(FNacimiento);
-            DateTime ingreso = Convert.ToDateTime(FIngreso);
-            DateTime hoy = Convert.ToDateTime(FHoy);
+            bool F_valida= false;
+
+            DateTime nacimiento = Convert.ToDateTime(FNacimiento).Date;
+            DateTime ingreso = Convert.ToDateTime(FIngreso).Date;
+            DateTime hoy = System.DateTime.Now;
+
+            if(nacimiento > ingreso)
+            {
+                lblError1.Visible = true;
+                lblError1.Text = "ERROR la fecha de ingreso es menor que la fecha de nacimiento.";
+            }
+
+            if(hoy < ingreso)
+            {
+                lblError2.Visible = true;
+                lblError2.Text = "ERROR la fecha de ingreso es superior a la fecha de hoy.";
+            }
+
+            if(nacimiento > hoy)
+            {
+                lblError3.Visible = true;
+                lblError3.Text = "ERROR la fecha de nacimiento es superior a la fecha de hoy.";
+            }
+            
+            if(lblError3.Visible == false && lblError2.Visible == false && lblError1.Visible == false)
+            {
+                F_valida = true;               
+            }
+            return F_valida;
         }
 
         protected void CalNacimiento_SelectionChanged(object sender, EventArgs e)
         {
             string nacimiento = CalNacimiento.SelectedDate.ToShortDateString();
-            txtFnaEmp.Text = nacimiento;
         }
 
         protected void CalIngreso_SelectionChanged(object sender, EventArgs e)

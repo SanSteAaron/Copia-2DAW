@@ -93,14 +93,27 @@
             <br />
             <br />
             <br />
-                <div class="DivFormEnviar">
-                    <asp:Button ID="cdmEnviar" Text="Enviar"  runat="server" OnClick="cdmEnviar_Click" />
-                </div>                
-                <br />
-                <br />
-                <div class="DivFormLabel">
-                    <asp:Label ID="lblValores" runat="server" Visible="false" BackColor="#66FFFF" Width="60%"></asp:Label>
-                </div>
+            <div class="DivFormEnviar">
+                <asp:Button ID="cdmEnviar" Text="Enviar"  runat="server" OnClick="cdmEnviar_Click" />
+            </div>                
+            <br />
+            <br />
+            <div class="DivFormLabel">
+                <asp:Label ID="lblError1" runat="server" Text="" ForeColor="Red"></asp:Label>
+            </div>
+            <br />
+            <div class ="DivFormLabel">
+                <asp:Label ID="lblError2" runat="server" Text="" ForeColor="Red"></asp:Label>
+            </div>
+            <br />
+            <div class ="DivFormLabel">
+                <asp:Label ID="lblError3" runat="server" Text="" ForeColor="Red"></asp:Label>
+            </div>
+            <br />
+            <br />
+            <div class="DivFormLabel">
+                <asp:Label ID="lblValores" runat="server" Visible="false" BackColor="#66FFFF" Width="60%"></asp:Label>
+            </div>
         </div>
     </form>
 </body>

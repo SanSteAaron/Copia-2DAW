@@ -177,6 +177,33 @@ namespace GesPresta
         protected global::System.Web.UI.WebControls.Button cdmEnviar;
 
         /// <summary>
+        /// Control lblError1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError1;
+
+        /// <summary>
+        /// Control lblError2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError2;
+
+        /// <summary>
+        /// Control lblError3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError3;
+
+        /// <summary>
         /// Control lblValores.
         /// </summary>
         /// <remarks>
