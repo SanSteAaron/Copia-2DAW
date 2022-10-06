@@ -30,15 +30,18 @@ namespace GesPresta
             "<br/> Departamento: " + ddlDepEmp.Text;
         }
 
-        public bool ComprobarFechas(string FNacimiento,string FIngreso)
+        protected bool ComprobarFechas(string FNacimiento,string FIngreso)
         {
             bool F_valida= false;
 
             DateTime nacimiento = Convert.ToDateTime(FNacimiento).Date;
             DateTime ingreso = Convert.ToDateTime(FIngreso).Date;
             DateTime hoy = System.DateTime.Now;
+            lblError1.Visible = false;
+            lblError2.Visible = false;
+            lblError3.Visible = false;
 
-            if(nacimiento > ingreso)
+            if (nacimiento > ingreso)
             {
                 lblError1.Visible = true;
                 lblError1.Text = "ERROR la fecha de ingreso es menor que la fecha de nacimiento.";
@@ -58,14 +61,22 @@ namespace GesPresta
             
             if(lblError3.Visible == false && lblError2.Visible == false && lblError1.Visible == false)
             {
-                F_valida = true;               
+                F_valida = true;             
             }
             return F_valida;
         }
 
         protected void CalNacimiento_SelectionChanged(object sender, EventArgs e)
         {
+            DateTime dthoy = System.DateTime.Now;
+            string hoy = dthoy.ToShortDateString();
             string nacimiento = CalNacimiento.SelectedDate.ToShortDateString();
+            string ingreso = CalIngreso.SelectedDate.ToShortDateString();
+            txtFnaEmp.Text = nacimiento;
+            if (txtFinEmp.Text != "")
+            {
+                ComprobarFechas(nacimiento, ingreso);
+            }          
         }
 
         protected void CalIngreso_SelectionChanged(object sender, EventArgs e)
@@ -75,6 +86,10 @@ namespace GesPresta
             string nacimiento = CalNacimiento.SelectedDate.ToShortDateString();
             string ingreso = CalIngreso.SelectedDate.ToShortDateString();
             txtFinEmp.Text = ingreso;
+            if (txtFnaEmp.Text != "")
+            {
+                ComprobarFechas(nacimiento, ingreso);
+            }       
         }
     }
 }

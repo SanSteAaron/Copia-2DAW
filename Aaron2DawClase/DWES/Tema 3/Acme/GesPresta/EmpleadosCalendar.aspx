@@ -78,15 +78,15 @@
                     <div>Antigüedad:</div>
                 </div>
                 <div>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtAños" runat="server"></asp:TextBox>
                     <div class="TextoAnt">Años</div>
                 </div>
                 <div>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtMeses" runat="server"></asp:TextBox>
                     <div class="TextoAnt">Meses</div>
                 </div>
                 <div>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtDías" runat="server"></asp:TextBox>
                     <div class="TextoAnt">Días</div>
                 </div>
             </div>
