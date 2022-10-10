@@ -60,11 +60,11 @@
             <br />
             <div class="Fechas">
                 <div class="TextoCal">Fecha de Nacimiento</div>    
-                <asp:TextBox class="aspForms" ID="txtFnaEmp" runat="server"></asp:TextBox>
+                <asp:TextBox class="aspForms" ID="txtFnaEmp" runat="server" OnTextChanged="txtFnaEmp_TextChanged"></asp:TextBox>
             </div>
             <div class="Fechas">
                 <div class="TextoCal">Fecha de ingreso</div>
-                <asp:TextBox class="aspForms" ID="txtFinEmp" runat="server"></asp:TextBox>
+                <asp:TextBox class="aspForms" ID="txtFinEmp" runat="server" OnTextChanged="txtFinEmp_TextChanged"></asp:TextBox>
             </div>
             <br />
             <div class="Calendario">
