@@ -11,14 +11,14 @@ namespace GesPresta
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtCodEmp.Focus();
-            /*
-            txtNifEmp.Text= "11111";
-            int a = 3;
-            int b = 0;
-            int c = a / b;
-            */
-
+            Trace.Write("Evento", "Entrando en Page_Load");
+            txtCodEmp.Focus(); // Sitúa el foco en el elemento Código Empleado
+            if (Trace.IsEnabled)
+            {
+                txtNifEmp.Text = "11111111X"; // Establece un valor por defecto para el campo
+                Trace.Warn("Asignación", "Cambiado el valor txtNifEmp a: " + txtNifEmp.Text);
+            }
+            Trace.Write("Evento", "Saliendo de Page_Load");
         }
     }
 }

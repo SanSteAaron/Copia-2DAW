@@ -39,3 +39,7 @@
 .TextoAnt{
     display:inline-block;
 }
+
+#ValidationSummary1{
+    text-align:center;
+}
