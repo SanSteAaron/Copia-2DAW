@@ -1,6 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Prestaciones.aspx.cs" Inherits="GesPresta.Prestaciones" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Prestaciones2.aspx.cs" Inherits="GesPresta.Prestaciones2" %>
 
 <%@ Register Src="~/Cabecera.ascx" TagPrefix="uc1" TagName="Cabecera" %>
+<%@ Register Src="~/prestacionesBuscar.ascx" TagPrefix="uc1" TagName="prestacionesBuscar" %>
+
 
 
 <!DOCTYPE html>
@@ -25,6 +27,7 @@
             </div>
             <div id="DivForm">
                 <asp:TextBox class="aspForms" ID="txtCodPre" runat="server"></asp:TextBox>
+                <asp:Button ID="btnVerPrestaciones" runat="server" Text="Ver Prestaciones" CausesValidation="false" OnClick="btnVerPrestaciones_Click" />
                 <asp:RequiredFieldValidator ID="rqdTxtCodPre" ControlToValidate="txtCodPre" runat="server" ErrorMessage="El Código de Prestación es obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="regTxtCodPre" ValidationExpression="\d{3}-\d{3}-\d{3}" ControlToValidate="txtCodPre" runat="server" ErrorMessage="El formato introducido debe ser 3 dígitos, un guión, 3 dígitos, un guión, 3 dígitos" ForeColor="Green"></asp:RegularExpressionValidator>
        
@@ -45,9 +48,18 @@
                     <asp:ListItem Value="Familiar">Familiar</asp:ListItem>
                     <asp:ListItem Value="Otras">Otras</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <br />
+                <uc1:prestacionesBuscar Visible="false" runat="server" id="prestacionesBuscar" />
+                <br />
+                <br />
+                <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CausesValidation="false" Visible="false" OnClick="btnSeleccionar_Click" />
+                <br />  
+                <br />
+                <asp:Button  id="cdmEnviar" text="Enviar" value="BEnviar" runat="server" />
             </div>
         </div>
-        <asp:Button  id="cdmEnviar" text="Enviar" value="BEnviar" runat="server" />
+        
     </form>
 </body>
 </html>
