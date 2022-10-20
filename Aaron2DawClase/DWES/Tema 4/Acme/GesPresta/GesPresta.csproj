@@ -78,6 +78,7 @@
     <Content Include="HojaDeEstilosPrestaciones.css" />
     <Content Include="MPDefault.aspx" />
     <Content Include="MPEmpleados.aspx" />
+    <Content Include="MPPrestaciones.aspx" />
     <Content Include="Prestaciones2.aspx" />
     <Content Include="Prestaciones1.aspx" />
     <Content Include="Prestaciones.aspx" />
@@ -141,6 +142,13 @@
     </Compile>
     <Compile Include="MPEmpleados.aspx.designer.cs">
       <DependentUpon>MPEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPPrestaciones.aspx.cs">
+      <DependentUpon>MPPrestaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPPrestaciones.aspx.designer.cs">
+      <DependentUpon>MPPrestaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Prestaciones2.aspx.cs">
       <DependentUpon>Prestaciones2.aspx</DependentUpon>

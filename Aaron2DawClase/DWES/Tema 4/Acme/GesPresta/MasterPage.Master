@@ -38,7 +38,7 @@
             <p id="Nav">
         <asp:LinkButton ID="LinkInicio" CausesValidation="false" runat="server" PostBackUrl="~/MPDefault.aspx">Inicio</asp:LinkButton>&nbsp;&nbsp;&nbsp;
         <asp:LinkButton ID="LinkEmpleados" CausesValidation="false" runat="server" PostBackUrl="~/MPEmpleados.aspx">Empleados</asp:LinkButton>&nbsp;&nbsp;&nbsp;
-        <asp:LinkButton ID="LinkPrestaciones" CausesValidation="false" runat="server" PostBackUrl="~/Prestaciones.aspx">Prestaciones</asp:LinkButton>
+        <asp:LinkButton ID="LinkPrestaciones" CausesValidation="false" runat="server" PostBackUrl="~/MPPrestaciones.aspx">Prestaciones</asp:LinkButton>
     </p>
     <h1>
         ACME INNOVACIÓN, S. FIG.
