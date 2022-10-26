@@ -53,7 +53,7 @@ nav{
     font-size: 100%;
     font-weight: bold;
     color: black;
-    transition: background-color 0.8s;
+    transition: background-color 1.2s;
 }
 
 .menuactual{
@@ -70,7 +70,7 @@ nav{
 
 .menu:hover{
     background-color: #7b68ee;
-    transition: background-color 0.8s;
+    transition: background-color 1.2s;
 }
 
 nav a{
@@ -89,6 +89,7 @@ nav a:hover{
     margin-left: 14%;
     margin-bottom: 1%;
     border:solid;
+    border-color: #e0ffff;
     float: left;
 }
 
@@ -98,6 +99,7 @@ nav a:hover{
     margin-right: 14%;
     margin-bottom: 1%;
     border:solid;
+    border-color: #e0ffff;
     float: right;
 }
 
@@ -109,6 +111,23 @@ nav a:hover{
     min-height: 300px;
     margin-bottom: 1%;
     border:solid;
+    border-color: #e0ffff;
+}
+
+.infoInicio p{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+    font-family:"Helvetica";
+}
+
+.infoTitulo{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 100%;
+    margin-top: 8%;
+    font-style: italic;
+    font-family: "Aclonica", sans-serif;
 }
 
 .infoInicioIMG{
@@ -119,11 +138,12 @@ nav a:hover{
     min-height: 300px;
     margin-bottom: 1%;
     border:solid;
+    border-color: #e0ffff;
     text-align: center;
 }
 
 .infoInicioIMG img{
-    vertical-align: middle;
+    margin-top: 4%;
 }
 
 footer{
@@ -135,3 +155,6 @@ footer{
     border:solid;
     float: left;
 }
+
+
+
