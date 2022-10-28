@@ -38,7 +38,7 @@
     <br />
     <h3 style="text-align:center">Productos</h3>
     <br />
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [PRODUCTO] WHERE ([IdTipo] = @IdTipo)">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [DesTip], [IdUnidad], [PrePro], [DesPro], [IdProducto] FROM [ProductosDet] WHERE ([IdTipo] = @IdTipo)">
         <SelectParameters>
             <asp:ControlParameter ControlID="grdTipos" Name="IdTipo" PropertyName="SelectedValue" Type="String" />
         </SelectParameters>
@@ -46,13 +46,13 @@
     <asp:GridView ID="grdProductos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdProducto" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="70%">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
-            <asp:BoundField DataField="IdProducto" HeaderText="IdProducto" ReadOnly="True" SortExpression="IdProducto" />
-            <asp:BoundField DataField="DesPro" HeaderText="DesPro" SortExpression="DesPro" />
-            <asp:BoundField DataField="PrePro" HeaderText="PrePro" SortExpression="PrePro" DataFormatString="{0:n2}" >
+            <asp:BoundField DataField="IdProducto" HeaderText="Id Producto" SortExpression="IdProducto" ReadOnly="True" />
+            <asp:BoundField DataField="DesPro" HeaderText="Descripción" SortExpression="DesPro" />
+            <asp:BoundField DataField="PrePro" HeaderText="Precio" SortExpression="PrePro" DataFormatString="{0:n2}" >
             <ItemStyle HorizontalAlign="Right" />
             </asp:BoundField>
-            <asp:BoundField DataField="IdUnidad" HeaderText="IdUnidad" SortExpression="IdUnidad" />
-            <asp:BoundField DataField="IdTipo" HeaderText="IdTipo" SortExpression="IdTipo" />
+            <asp:BoundField DataField="IdUnidad" HeaderText="Unidad" SortExpression="IdUnidad" />
+            <asp:BoundField DataField="DesTip" HeaderText="Tipo" SortExpression="DesTip" />
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
