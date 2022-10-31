@@ -37,11 +37,10 @@ header p{
 nav{
     position: fixed;
     top: 20%;
-    left:10%;
+    left:10.2%;
     text-align: center;
     width: 80%;
     margin-right: 10%;
-    min-width: 1250px;
 }
 
 .menu{
@@ -54,6 +53,7 @@ nav{
     font-size: 100%;
     font-weight: bold;
     color: black;
+    transition: background-color 1.2s;
 }
 
 .menuactual{
@@ -70,6 +70,7 @@ nav{
 
 .menu:hover{
     background-color: #7b68ee;
+    transition: background-color 1.2s;
 }
 
 nav a{
@@ -82,20 +83,71 @@ nav a:hover{
 
 /*Contenido Pág*/
 
-#contenido{
+.controlInicioL{
     margin-top: 15%;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    min-height: 700px;
+    width: 35%;
+    margin-left: 14%;
+    margin-bottom: 1%;
     border:solid;
+    border-color: #e0ffff;
+    float: left;
 }
 
-#foot{
+.controlInicioR{
+    margin-top: 15%;
+    width: 35%;
+    margin-right: 14%;
+    margin-bottom: 1%;
+    border:solid;
+    border-color: #e0ffff;
+    float: right;
+}
+
+.infoInicio{
+    margin-top: 1%;
+    width: 97%;
+    margin-left: 1%;
+    margin-right: 1%;
+    min-height: 200px;
+    margin-bottom: 1%;
+    border:solid;
+    border-color: #e0ffff;
+    font-size: 100%;
+    font-family: "Helvetica";
+    text-align: center;
+}
+
+.tablaPrincipal{
+    font-family: "Aclonica",sans-serif;
+    color: white;
+    font-style: italic;
+    width: 39%;
+    margin-left: 50%;
+    min-height: 100px;
+    margin-right:10%;
+    margin-top: 8%;
+    
+}
+
+table{
+    color: white;
+    width: 49%;
+    margin-left: 10%;
+    min-height: 150px;
+    margin-right:40%;
+    margin-top: 4%;
+}
+
+footer{
     margin-top: 3%;
     width: 80%;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-bottom: 1%;
     min-height: 100px;
     border:solid;
+    border-color:#e0ffff;
+    float: left;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 100%;
 }

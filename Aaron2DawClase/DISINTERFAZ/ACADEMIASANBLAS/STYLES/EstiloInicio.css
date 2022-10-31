@@ -153,8 +153,11 @@ footer{
     margin-bottom: 1%;
     min-height: 100px;
     border:solid;
+    border-color:#e0ffff;
     float: left;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 100%;
 }
-
 
 
