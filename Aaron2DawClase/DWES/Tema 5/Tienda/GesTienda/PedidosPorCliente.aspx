@@ -2,17 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="InfoContenido" runat="server">
-    <div class="contenidotitulo" style="text-align:center">Pedidos realizado por los clientes</div>
-        <br />
-        <div>
-            <asp:Label ID="lblResultado" runat="server"></asp:Label>
-        </div>
-        <br />
-        <asp:Label ID="lblMensajes" ForeColor="red" runat="server"></asp:Label>
+    <div class="contenidotitulo" >Pedidos realizado por los clientes</div>
         <br />
         <br />
     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [IdCliente], [NomCli], [PobCli], [CorCli] FROM [CLIENTE]"></asp:SqlDataSource>
-    <asp:GridView runat="server" ID="grdClientes" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdCliente" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="50%">
+    <asp:GridView runat="server" ID="grdClientes" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdCliente" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" HorizontalAlign="Justify" Width="50%" OnSelectedIndexChanged="grdClientes_SelectedIndexChanged" PageSize="5">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
@@ -33,4 +27,16 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+    <br />
+    <div>
+        <asp:Label ID="lblResultado" runat="server"></asp:Label>
+    </div>
+    <br />
+    <div>
+        <asp:Label ID="lblMensajes" ForeColor="red" runat="server"></asp:Label>
+    </div>  
+    <br />
+    <div>
+        <asp:Label ID="lblTotal" runat="server" Visible="False"></asp:Label>
+    </div>  
 </asp:Content>
