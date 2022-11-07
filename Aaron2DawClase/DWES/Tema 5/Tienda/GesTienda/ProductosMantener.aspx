@@ -31,7 +31,6 @@
             <asp:BoundField DataField="IdProducto" HeaderText="Id Producto" ReadOnly="True" SortExpression="IdProducto" />
             <asp:BoundField DataField="DesPro" HeaderText="Descripción" SortExpression="DesPro" />
             <asp:BoundField DataField="PrePro" DataFormatString="{0:n2}" HeaderText="Precio" SortExpression="PrePro">
-            <ItemStyle HorizontalAlign="Right" />
             </asp:BoundField>
         </Columns>
         <EditRowStyle BackColor="#999999" />
@@ -78,13 +77,13 @@
     </div>
     <br />
     <div class="Botones">
-        <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" Visible="true" />
-        <asp:Button ID="btnEditar" runat="server" Text="Editar" Visible="false" />
+        <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" Visible="true" OnClick="btnNuevo_Click" />
+        <asp:Button ID="btnEditar" runat="server" Text="Editar" Visible="false" OnClick="btnEditar_Click" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" Visible="false" />
-        <asp:Button ID="btnInsertar" runat="server" Text="Insertar" Visible="false" />
-        <asp:Button ID="btnModificar" runat="server" Text="Modiicar" Visible="false" />
+        <asp:Button ID="btnInsertar" runat="server" Text="Insertar" Visible="false" OnClick="btnInsertar_Click" />
+        <asp:Button ID="btnModificar" runat="server" Text="Modificar" Visible="false" OnClick="btnModificar_Click" />
         <asp:Button ID="btnBorrar" runat="server" Text="Borrar" Visible="false" />
-        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Visible="false" />
+        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Visible="false" OnClick="btnCancelar_Click" />
     </div> 
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [UNIDAD]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [TIPO]"></asp:SqlDataSource>
