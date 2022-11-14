@@ -12,10 +12,12 @@
             width:50%;
             text-align:right;
             display:inline-block;
+            padding-right: 1%;
+            
         }
         .boton{
             text-align:center;
-            
+            margin-top:2%;
         }
     </style>
 </head>
@@ -42,11 +44,11 @@
             </div>
             <div>
                 <div class="Texto">Contraseña:</div>
-                <asp:TextBox ID="txtPassword1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPassword1" runat="server" TextMode="Password"></asp:TextBox>
             </div>
             <div>
                 <div class="Texto">Introduzca nuevamente la contraseña:</div>
-                <asp:TextBox ID="txtPassword2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPassword2" runat="server" TextMode="Password"></asp:TextBox>
             </div>
             <div>
                 <div class="Texto">NIE/NIF/CIF:</div>
@@ -55,28 +57,40 @@
             <div>
                 <div class="Texto">Nombre/Razón Social:</div>
                 <asp:TextBox ID="txtNomCli" runat="server"></asp:TextBox>
-                <div>
+            </div>
+            <div>
                 <div class="Texto">Dirección:</div>
                 <asp:TextBox ID="txtDirCli" runat="server"></asp:TextBox>
             </div>
-                <div>
+            <div>
                 <div class="Texto">Población:</div>
                 <asp:TextBox ID="txtPobCli" runat="server"></asp:TextBox>
             </div>
-                <div>
+            <div>
                 <div class="Texto">Código Postal:</div>
                 <asp:TextBox ID="txtCpoCli" runat="server"></asp:TextBox>
             </div>
-                <div>
+            <div>
                 <div class="Texto">Teléfono:</div>
                 <asp:TextBox ID="txtTelCli" runat="server"></asp:TextBox>
             </div>
-            </div>
             <div class="boton">
-                <asp:Button ID="btnInsertar" runat="server" Text="Insertar" />
-            </div>
-            
+                <asp:Button ID="btnInsertar" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
+                <br />
+                <div style="text-align: center">
+                <asp:Label ID="lblMensajes" runat="server" Text="" ForeColor="Red"></asp:Label>
+                </div>
+                <br />
+                <asp:LinkButton ID="linkInicio" runat="server" OnClick="linkInicio_Click" >Ir al Inicio</asp:LinkButton>      
+            </div>   
         </div>
+        <div id="pie">
+                <br />
+                <br />
+                © Desarrollo de Aplicaciones Web interactivas con Acceso a Datos
+                <br />
+                IES Mare Nostrum (Alicante)
+            </div>
     </form>
 </body>
 </html>
