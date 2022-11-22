@@ -31,7 +31,7 @@ section{
 }
 @media screen and (max-width:700px){
     article{
-        width:100%;
+        width:50%;
     }
     .fila2{
         background:#40f88d;

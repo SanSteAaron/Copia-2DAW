@@ -1,0 +1,56 @@
+body{
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+header{
+    background-color: orange;
+    min-height: 100px;
+    margin-bottom: 1%;
+}
+
+#menu{
+    background-color: orange;
+    min-height: 100px;
+    margin-bottom: 1%;
+}
+
+#contenedor{
+    background-color:chocolate;
+    width: 80%;
+    min-height: 500px;
+    float:left;
+}
+
+#nav1{
+    background-color: orange;
+    min-height: 100px;
+}
+
+#nav2{
+    background-color: orange;
+    width: 20%;
+    min-height: 400px;
+    float: left;
+}
+
+#cuerpo1{
+    background-color: orange;
+    min-height: 400px;
+    width: 80%;
+    float: right;
+}
+
+aside{
+    background-color: orange;
+    float:right;
+    width: 20%;
+    min-height: 500px;
+}
+
+footer{
+    background-color: orange;
+    min-height: 50px;
+    margin-top: 1%;
+}
