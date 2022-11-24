@@ -1,56 +1,85 @@
-body{
+#contenedor{
     text-align: center;
-    font-weight: bold;
-    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin-left:10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    height: 900px;
 }
 
 header{
+    height:10%;
     background-color: orange;
-    min-height: 100px;
+    width: 100%;
     margin-bottom: 1%;
 }
 
 #menu{
+    height:12%;
     background-color: orange;
-    min-height: 100px;
+    width: 100%;
     margin-bottom: 1%;
 }
 
-#contenedor{
+#contenido{
+    height:60%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+#contenido *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#INcontenido{
+    height: 100%;
+    width: 70%;
     background-color:chocolate;
-    width: 80%;
-    min-height: 500px;
-    float:left;
+    margin-right: 0.5%;
+}
+
+section{
+    height:78%;
+    width: 100%;
+    margin-top: 0.7%;
+}
+
+section *{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #nav1{
+    width: 100%;
     background-color: orange;
-    min-height: 100px;
+    height: 20%;
+    margin-bottom: 0.5%;
 }
 
 #nav2{
+    width: 28.4%;
     background-color: orange;
-    width: 20%;
-    min-height: 400px;
-    float: left;
+    height: 100%;
+    margin-right: 0.5%;
 }
 
 #cuerpo1{
-    background-color: orange;
-    min-height: 400px;
-    width: 80%;
-    float: right;
+    height: 100%;
+    width: 70%;
+    background-color:orange;
+    margin-left: 0.5%;
 }
 
 aside{
-    background-color: orange;
-    float:right;
-    width: 20%;
-    min-height: 500px;
+    height: 100%;
+    width: 28.6%;
+    background-color:orange;
+    margin-left: 0.5%;
 }
 
 footer{
+    height:8%;
     background-color: orange;
-    min-height: 50px;
-    margin-top: 1%;
 }
