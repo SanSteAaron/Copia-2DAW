@@ -1,0 +1,148 @@
+#contenedor{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin-left:10%;
+    margin-top: 5%;
+    height: 48em;
+}
+
+header{
+    text-align: center;
+    height:10%;
+    width:100%;
+    background-color: orange;
+    margin-bottom: 1%;
+    border:2px solid #7d758a;
+}
+
+#menu{
+    text-align: center;
+    height:12%;
+    width:100%;
+    background-color: orange;
+    margin-bottom: 1%;
+    border:2px solid #7d758a;
+}
+
+#contenido{
+    height:60%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+#contenido *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#INcontenido{
+    height: 100%;
+    width: 70%;
+}
+
+section{
+    height:78%;
+    width: 100%;
+    padding-top: 0.5%;
+    background-color: chocolate;
+    border:2px solid #7d758a;
+}
+
+section *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#nav1{
+    text-align: center;
+    width: 100%;
+    background-color: orange;
+    height: 20%;
+    border:2px solid #7d758a;
+}
+
+#nav2{
+    text-align: center;
+    width: 29%;
+    background-color: orange;
+    height: 100%;
+    border:2px solid #7d758a;
+}
+
+#cuerpo1{
+    text-align: center;
+    height: 100%;
+    width: 69.5%;
+    background-color:orange;
+    float:right;
+    border:2px solid #7d758a;
+}
+
+aside{
+    text-align: center;
+    height: 100%;
+    width: 29%;
+    background-color:orange;
+    float: right;
+    border:2px solid #7d758a;
+}
+
+footer{
+    text-align: center;
+    width:100%;
+    height:8%;
+    background-color: orange;
+    border:2px solid #7d758a;
+}
+
+@media (min-width:769px) and (max-width:1279px){
+    #contenedor{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    aside{
+        float:none;
+        width: 100%;
+        height: 15%;
+    }
+    #INcontenido{
+        width:100%;
+        height:82%;
+        margin-bottom: 1.4%;
+    }
+}
+
+@media (max-width:768px){
+    #contenedor{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    aside{
+        float:none;
+        width: 100%;
+        height: 15%;
+    }
+    #INcontenido{
+        width:100%;
+        height:81%;
+        margin-bottom: 2%;
+    }
+    #nav1{
+        height: 12%;
+    }
+    section{
+        height:87%;
+    }
+    #cuerpo1{
+        float:none;
+        width: 100%;
+        height:85%;
+    }
+    #nav2{
+        height: 14%;
+        margin-bottom: 1%;
+        width: 100%;
+    }
+}
