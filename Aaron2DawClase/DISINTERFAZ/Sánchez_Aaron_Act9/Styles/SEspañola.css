@@ -1,0 +1,17 @@
+body {
+    margin: 10%;
+    width: 80%;
+    text-align: center;
+    background-image: url("../images/FONDOMUNDIAL.jpg");
+    background-image: fixed;
+}
+  
+picture {
+    display: block;
+    width: 100%; 
+    text-align: center;
+}
+
+picture *{
+    width: 80%;
+}
