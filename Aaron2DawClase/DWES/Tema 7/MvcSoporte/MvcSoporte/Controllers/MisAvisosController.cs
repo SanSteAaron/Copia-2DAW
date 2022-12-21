@@ -42,7 +42,6 @@ namespace MvcSoporte.Controllers
             // var mvcSoporteContexto = _context.Avisos.Include(a => a.Empleado)
             // .Include(a => a.Equipo).Include(a => a.TipoAveria);
             // return View(await mvcSoporteContexto.ToListAsync());
-
         }
 
         // GET: MisAvisos/Details/5
@@ -62,6 +61,21 @@ namespace MvcSoporte.Controllers
             {
                 return NotFound();
             }
+
+            // Para evitar el acceso a los avisos de otros empleados
+            var emailUsuario = User.Identity.Name;
+            var empleado = await _context.Empleados
+            .Where(e => e.Email == emailUsuario)
+            .FirstOrDefaultAsync();
+            if (empleado == null)
+            {
+                return NotFound();
+            }
+            if (aviso.EmpleadoId != empleado.Id)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
 
             return View(aviso);
         }
@@ -117,6 +131,21 @@ namespace MvcSoporte.Controllers
             {
                 return NotFound();
             }
+
+            // Para evitar el acceso a los avisos de otros empleados
+            var emailUsuario = User.Identity.Name;
+            var empleado = await _context.Empleados
+            .Where(e => e.Email == emailUsuario)
+            .FirstOrDefaultAsync();
+            if (empleado == null)
+            {
+                return NotFound();
+            }
+            if (aviso.EmpleadoId != empleado.Id)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
             ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "Id", "Nombre", aviso.EmpleadoId);
             ViewData["EquipoId"] = new SelectList(_context.Equipos, "Id", "CodigoEquipo", aviso.EquipoId);
             ViewData["TipoAveriaId"] = new SelectList(_context.TipoAverias, "Id", "Descripcion", aviso.TipoAveriaId);
@@ -178,6 +207,21 @@ namespace MvcSoporte.Controllers
             {
                 return NotFound();
             }
+
+            // Para evitar el acceso a los avisos de otros empleados
+            var emailUsuario = User.Identity.Name;
+            var empleado = await _context.Empleados
+            .Where(e => e.Email == emailUsuario)
+            .FirstOrDefaultAsync();
+            if (empleado == null)
+            {
+                return NotFound();
+            }
+            if (aviso.EmpleadoId != empleado.Id)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
 
             return View(aviso);
         }
