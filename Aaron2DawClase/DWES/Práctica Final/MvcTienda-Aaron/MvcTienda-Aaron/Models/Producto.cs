@@ -30,11 +30,11 @@ namespace MvcTienda_Aaron.Models
                 Precio = Convert.ToDecimal(value.Replace('.', ','));
             }
         }
-        public int? Stock { get; set; }
         public bool? Escaparate { get; set; }
         public string? Imagen { get; set; }
         public int CategoriaId { get; set; }
-        public Categoría? Categoria { get; set; }
+        public Categoria? Categoria { get; set; }
         public ICollection<Detalle>? Detalles { get; set; }
+        public ICollection<ProductoTalla>? ProductoTallas { get; set; }
     }
 }

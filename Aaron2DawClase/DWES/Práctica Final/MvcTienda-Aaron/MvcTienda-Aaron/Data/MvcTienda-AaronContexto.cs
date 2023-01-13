@@ -9,8 +9,10 @@ namespace MvcTienda_Aaron.Data
               : base(options)
         {
         }
-        public DbSet<Categoría>? Categorias { get; set; }
+        public DbSet<Categoria>? Categorias { get; set; }
         public DbSet<Producto>? Productos { get; set; }
+        public DbSet<Talla>? Talla { get; set; }
+        public DbSet<ProductoTalla>? ProductosTalla { get; set; }
         public DbSet<Cliente>? Clientes { get; set; }
         public DbSet<Estado>? Estados { get; set; }
         public DbSet<Pedido>? Pedidos { get; set; }
@@ -25,6 +27,7 @@ namespace MvcTienda_Aaron.Data
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
         }
+
 
     }
 }

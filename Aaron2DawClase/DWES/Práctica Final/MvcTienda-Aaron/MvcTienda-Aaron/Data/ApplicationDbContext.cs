@@ -10,6 +10,5 @@ namespace MvcTienda_Aaron.Data
             : base(options)
         {
         }
-        public DbSet<MvcTienda_Aaron.Models.Cliente> Cliente { get; set; }
     }
 }
