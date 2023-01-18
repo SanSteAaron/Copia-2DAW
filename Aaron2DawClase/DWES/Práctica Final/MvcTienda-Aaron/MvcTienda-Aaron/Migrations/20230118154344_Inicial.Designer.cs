@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcTienda_Aaron.Data;
 
@@ -11,9 +12,10 @@ using MvcTienda_Aaron.Data;
 namespace MvcTienda_Aaron.Migrations
 {
     [DbContext(typeof(MvcTienda_AaronContexto))]
-    partial class MvcTienda_AaronContextoModelSnapshot : ModelSnapshot
+    [Migration("20230118154344_Inicial")]
+    partial class Inicial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -214,9 +216,6 @@ namespace MvcTienda_Aaron.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int?>("ProductoId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Stock")
                         .HasColumnType("int");
 
                     b.Property<int?>("TallaId")
