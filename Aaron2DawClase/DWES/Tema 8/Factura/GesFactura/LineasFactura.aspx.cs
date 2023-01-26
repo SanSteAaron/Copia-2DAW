@@ -19,8 +19,7 @@ namespace GesFactura
             double w_descuento = Convert.ToDouble(txtDescuento.Text);
             double w_tipoIVA = Convert.ToDouble(txtTipoIVA.Text);
             // Invocación del Web Service que devuelve un objeto de tipo Calculos
-            var resul = wsCalculos.CalculosLineaFactura(w_cantidad, w_precio,
-            w_descuento, w_tipoIVA);
+            var resul = wsCalculos.CalculosLineaFactura(w_cantidad, w_precio, w_descuento, w_tipoIVA);
             wsCalculos.Close();
             lblBruto.Text = resul.Bruto;
             lblDescuento.Text = resul.Descuento;
