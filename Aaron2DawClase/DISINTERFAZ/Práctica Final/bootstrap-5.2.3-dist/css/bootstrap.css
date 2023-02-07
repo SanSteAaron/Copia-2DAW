@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --bs-lila: #785073;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -37,6 +38,8 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-lila-rgb:81, 57, 105;
+  --bs-azul-rgb:58, 72, 135;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -7720,6 +7723,14 @@ textarea.form-control-lg {
   margin-bottom: 3rem !important;
 }
 
+.mb-6{
+  margin-bottom: 5rem !important;
+}
+
+.mb-7{
+  margin-bottom: 6.5rem !important;
+}
+
 .mb-auto {
   margin-bottom: auto !important;
 }
@@ -8172,6 +8183,21 @@ textarea.form-control-lg {
 
 .text-opacity-100 {
   --bs-text-opacity: 1;
+}
+
+.bg-imagen{
+  --bs-bg-opacity: 0.10;
+  background-image: url(../../Images/MicroOM.jpg), var(--bs-bg-opacity) !important;
+}
+
+.bg-lila{
+  --bs-bg-opacity:1;
+  background-color: rgba(var(--bs-lila-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-azul{
+  --bs-bg-opacity:1;
+  background-color: rgba(var(--bs-azul-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-primary {
