@@ -7988,6 +7988,10 @@ textarea.form-control-lg {
   font-family: var(--bs-font-monospace) !important;
 }
 
+.font-unbounded{
+  font-family: 'Unbounded', cursive;
+}
+
 .fs-1 {
   font-size: calc(1.375rem + 1.5vw) !important;
 }
@@ -8204,12 +8208,31 @@ textarea.form-control-lg {
 
 .bg-imagen{
   background-image: url(../../Images/Fondo.png) !important;
-  background-size: 20rem;
+  background-size: 22rem;
 }
 
-.bg-lila{
+.bg-gradient1{
   --bs-bg-opacity:1;
-  background-color: rgba(var(--bs-lila-rgb), var(--bs-bg-opacity)) !important;
+  background: rgb(75,3,128);
+  background: linear-gradient(90deg, rgba(75,3,128,1) 6%, rgba(8,8,150,1) 58%, rgba(58,151,255,1) 100%) !important;
+}
+
+.bg-gradient2{
+  --bs-bg-opacity:1;
+  background: rgb(116,25,176);
+  background: linear-gradient(90deg, rgba(116,25,176,1) 3%, rgba(253,29,29,1) 57%, rgba(252,216,69,1) 100%) !important;
+}
+
+.bg-gradient3{
+  --bs-bg-opacity:1;
+  background: rgb(144,28,230);
+  background: linear-gradient(90deg, rgba(144,28,230,1) 18%, rgba(40,40,255,1) 59%, rgba(58,151,255,1) 83%) !important;
+}
+
+.bg-gradient4{
+  --bs-bg-opacity:1;
+  background: rgb(255,243,53);
+  background: linear-gradient(90deg, rgba(255,243,53,1) 4%, rgba(255,155,40,1) 50%, rgba(255,32,32,1) 100%) !important;
 }
 
 .bg-azul{

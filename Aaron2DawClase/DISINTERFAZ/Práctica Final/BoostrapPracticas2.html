@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./bootstrap-5.2.3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
     <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
   </head>
   <body class="bg-imagen">
@@ -38,12 +41,12 @@
       <div class="row mb-5">
         <div class="col-lg-12 text-center">
           <img src="./Images/Logo.png" alt="Bootstrap" width="100">
-          <h1 class="mt-2">ONDA MARE</h1>
+          <h1 class="mt-2 font-unbounded display-1">ONDA MARE</h1>
         </div>
       </div>
       <div class="row  mb-6">
         <div class="col-lg-6 text-center p-5 bg-warning">
-          <h2>PODCAST ONDA MARE</h2>
+          <h2 class="font-unbounded">PODCAST ONDA MARE</h2>
           <p class="mt-5 text-center">Accede a nuestros podcast, consulta tus inquietudes con nosotros y suscríbete para no perderte ningún programa de la nueva temporada</p>
         </div>
         <div class="col-lg-6 text-center p-0">
@@ -72,9 +75,9 @@
       </div>
       <div class="row bg-azul mb-6" id="Noticias">
         <div class="col-lg-12 text-center p-5 ">
-          <h2 class="text-white">NOTICIAS</h2>
+          <h2 class="text-white font-unbounded">NOTICIAS</h2>
           <div id="carouselNoticiasOndaMare" class="carousel slide w-100 bg-light rounded mt-5 p-3" data-bs-ride="carousel">
-            <div class="carousel-inner align-items-center">
+            <div class="carousel-inner">
               <div class="carousel-item active text-white bg-dark " >
                 <h4 class="mt-3">NOTICIA 1</h4>
                 <p class="mt-4 mb-5">Paco</p>  
@@ -104,18 +107,110 @@
           <img src="./Images/Programas.jpg" alt="Bootstrap" class="w-100 ">
         </div>
         <div class="col-xl-6 text-center p-5 bg-warning">
-          <h2>PROGRAMAS</h2>
+          <h2 class="font-unbounded">PROGRAMAS</h2>
           <div class="d-grid gap-2 col-6 mx-auto mt-5">
-            <button class="btn btn-outline-azul mb-2" type="button">Programa 1</button>
-            <button class="btn btn-outline-azul mb-2" type="button">Programa 2</button>
-            <button class="btn btn-outline-azul mb-2" type="button">Programa 3</button>
-            <button class="btn btn-outline-azul " type="button">Programa 4</button>
+            <a class="btn btn-outline-azul mb-2" href="#Programa1" role="button">Programa 1</a>
+            <a class="btn btn-outline-azul mb-2" href="#Programa2" role="button">Programa 2</a>
+            <a class="btn btn-outline-azul mb-2" href="#Programa3" role="button">Programa 3</a>
+            <a class="btn btn-outline-azul" href="#Programa4" role="button">Programa 4</a>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-gradient1 mb-6 rounded" id="Programa1">
+        <div class="col-lg-12 text-center p-5">
+          <h2 class="text-white font-unbounded">PROGRAMA 1</h2>
+          <div class ="row">
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                Episodio 1
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample2">
+                <p>Deportes</p>
+              </div>   
+            </div>
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                Episodio 2
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample3">
+                <p>El Tiempo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-gradient2 mb-6 rounded" id="Programa2">
+        <div class="col-lg-12 text-center p-5">
+          <h2 class="text-white font-unbounded">PROGRAMA 2</h2>
+          <div class ="row">
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                Episodio 1
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample4">
+                <p>Deportes</p>
+              </div>   
+            </div>
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                Episodio 2
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample5">
+                <p>El Tiempo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-gradient3 mb-6 rounded" id="Programa3">
+        <div class="col-lg-12 text-center p-5">
+          <h2 class="text-white font-unbounded">PROGRAMA 3</h2>
+          <div class ="row">
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6">
+                Episodio 1
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample6">
+                <p>Deportes</p>
+              </div>   
+            </div>
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7">
+                Episodio 2
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample7">
+                <p>El Tiempo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-gradient4 mb-6 rounded" id="Programa4">
+        <div class="col-lg-12 text-center p-5">
+          <h2 class="text-white font-unbounded">PROGRAMA 4</h2>
+          <div class ="row">
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample8">
+                Episodio 1
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample8">
+                <p>Deportes</p>
+              </div>   
+            </div>
+            <div class="col-lg-6 text-center">
+              <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample9">
+                Episodio 2
+              </button>
+              <div class="row g-3 collapse bg-light p-3 rounded" id="collapseExample9">
+                <p>El Tiempo</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="row bg-azul mb-7" id="Contacto">
         <div class="col-lg-12 text-center p-5">
-          <h2 class="text-white">CONTACTA CON NOSOTROS</h2>
+          <h2 class="text-white font-unbounded">CONTACTA CON NOSOTROS</h2>
           <button class="btn btn-dark mb-4 mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
            Rellenar Formulario
           </button>
@@ -167,7 +262,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid bg-white bg-opacity-75">
+    <div class="container-fluid bg-white bg-opacity-75 mt-0">
       <div class="row pb-5 pt-3">
         <div class="col-sm-6 text-center">
           <p>Footer 1</p>
