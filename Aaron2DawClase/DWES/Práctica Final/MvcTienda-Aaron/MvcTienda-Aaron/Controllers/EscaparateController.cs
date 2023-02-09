@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Microsoft.AspNetCore.Mvc;
 using MvcTienda_Aaron.Data;
 using MvcTienda_Aaron.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MvcTienda_Aaron.Controllers
 {
@@ -25,13 +19,13 @@ namespace MvcTienda_Aaron.Controllers
         {
             var productos = _context.Productos.AsQueryable();
 
-            if (id  == null)
+            if (id == null)
             {
                 productos = productos.Where(x => x.Escaparate == true);
             }
             else
             {
-                productos = productos.Where(x => x.CategoriaId ==  id);
+                productos = productos.Where(x => x.CategoriaId == id);
 
                 ViewBag.DescripcionCategoría = _context.Categorias.Find(id).Descripcion.ToString();
             }
@@ -55,7 +49,7 @@ namespace MvcTienda_Aaron.Controllers
                             .Include(p => p.Categoria)
                             .FirstOrDefaultAsync(m => m.Id == id);
 
-            if(producto == null)
+            if (producto == null)
             {
                 return NotFound();
             }
@@ -67,7 +61,7 @@ namespace MvcTienda_Aaron.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> AñadirCarrito (int id)
+        public async Task<ActionResult> AñadirCarrito(int id)
         {
             var producto = await _context.Productos
                             .FirstOrDefaultAsync(m => m.Id == id);
