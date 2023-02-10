@@ -11,13 +11,13 @@
 <main class="container-fluid">
     <div class="row">
         @*Categorias*@
-        <div class="col-lg-3 col-md-12 col-sm-12">
+        <div class="col-lg-2 col-md-12 col-sm-12">
             <table class="table">
-                @foreach (var i in ViewData("ListaCategorias") as IEnumerable<Categoria>)
+                @foreach (var i in ViewData["Listacategorias"] as IEnumerable<Categoria>)
                 {
                     <tr>
                         <td>
-                            <a asp-action="Index" asp-route-id="@i.Id">@i.Descripcion</a>
+                            <a asp-action="Index" asp-route-id="@i.Id" class="text-uppercase text-black">@i.Descripcion</a>
                         </td>
                     </tr>
                 }
@@ -25,16 +25,45 @@
         </div>
 
         @*Tarjeta de productos*@
-        <div class="col-lg-9 col-md-12 col-sm-12">
+        <div class="col-lg-10 col-md-12 col-sm-12">
             <div class="card-columns">
                 @foreach (var item in Model)
                 {
-                    <div class="card" style="width:240px; height:450px; text-align:center">
+                    <div class="card shadow d-inline-block align-middle m-3" style="width:300px; height:600px; text-align:center">
                         <div>
                             @{
                                 var nombreImagen = "error.png";
-                                if{item.Imagen != null}
+                                if(item.Imagen != null)
+                                {
+                                    nombreImagen = item.Imagen;
+                                }
                             }
+                            <img class="card-img-top" style="width:150px; height:150px; margin:10px;" src="~/images/@nombreImagen">
+                        </div>
+                        <div class="card-body" style="height:350px;">
+                            <p class="card-text fw-bolder" style="height:50px;">@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                            <h4 class="fw-light">
+                                @item.PrecioCadena€
+                            </h4>
+                            <br/>
+                            <p class="fw-bolder">Tallas Disponibles</p>
+                            @foreach (var stock in ViewData["Listastock"] as IEnumerable<ProductoTalla>)
+                            {
+                                @foreach (var talla in ViewData["Listatallas"] as IEnumerable<Talla>)
+                                {
+                                    if (stock.ProductoId == item.Id)
+                                    {
+                                        if(talla.Id == stock.TallaId)
+                                        {
+                                            <input type="radio" class="btn-check" name="@stock.ProductoId" id="@stock.Id" autocomplete="off">
+                                            <label class="btn btn-sm btn-outline-warning w-100 mt-1" for="@stock.Id">@talla.Descripcion - @stock.Stock Disponibles</label>
+                                        }
+                                    }
+                                }             
+                            }
+                        </div>
+                        <div class="card-footer h-auto bg-white mt-4">
+                            <a asp-action="AñadirCarrito" asp-route-id="@item.Id" class="btn btn-dark" >Añadir al carrito</a>
                         </div>
                     </div>
                 }
