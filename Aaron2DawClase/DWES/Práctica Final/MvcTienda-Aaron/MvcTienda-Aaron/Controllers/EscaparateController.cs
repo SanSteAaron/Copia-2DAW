@@ -18,6 +18,7 @@ namespace MvcTienda_Aaron.Controllers
         public async Task<IActionResult> Index(int? id)
         {
             var productos = _context.Productos.AsQueryable();
+            var tallas = _context.Talla.AsQueryable();
 
             if (id == null)
             {
@@ -31,6 +32,8 @@ namespace MvcTienda_Aaron.Controllers
             }
 
             ViewData["Listacategorias"] = _context.Categorias.OrderBy(c => c.Descripcion).ToList();
+            ViewData["Listastock"] = _context.ProductosTalla.AsQueryable();
+            ViewData["Listatallas"] = tallas;
 
             productos = productos.Include(a => a.Categoria);
 
