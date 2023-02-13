@@ -7390,6 +7390,10 @@ textarea.form-control-lg {
   min-height: 100vh !important;
 }
 
+.min-vh-25 {
+  min-height: 25vh !important;
+}
+
 .flex-fill {
   flex: 1 1 auto !important;
 }
@@ -7745,7 +7749,7 @@ textarea.form-control-lg {
 }
 
 .mb-7{
-  margin-bottom: 6.5rem !important;
+  margin-bottom: 12rem !important;
 }
 
 .mb-auto {

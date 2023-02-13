@@ -11,7 +11,7 @@
     <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
   </head>
   <body class="bg-imagen">
-    <div class="container-fluid p-4 text-center shadow bg-white">
+    <div class="container-fluid p-4 text-center shadow bg-white sticky-top" id="Inicio">
       <nav class="navbar navbar-white  navbar-expand-lg">
         <div class="container-fluid">
           <a href="./BoostrapPracticas2.html"><img src="./Images/Logo.png" class="ms-3 me-5" alt="Bootstrap" width="50"></a>
@@ -38,7 +38,7 @@
       </nav>
     </div>
     <div class="container mt-4">
-      <div class="row mb-5">
+      <div class="row mb-5 bg-white rounded bg-opacity-25">
         <div class="col-lg-12 text-center">
           <img src="./Images/Logo.png" alt="Bootstrap" width="100">
           <h1 class="mt-2 font-unbounded display-1">ONDA MARE</h1>
@@ -77,18 +77,18 @@
         <div class="col-lg-12 text-center p-5 ">
           <h2 class="text-white font-unbounded">NOTICIAS</h2>
           <div id="carouselNoticiasOndaMare" class="carousel slide w-100 bg-light rounded mt-5 p-3" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active text-white bg-dark " >
-                <h4 class="mt-3">NOTICIA 1</h4>
-                <p class="mt-4 mb-5">Paco</p>  
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active text-white bg-dark min-vh-25" >
+                <h4 class="mt-3">SUPERBOWL 2023</h4>
+                <p class="mt-4">Los Chiefs remontaron a los Philadelphia Eagles para imponerse por 38-35 en una de las mejores finales de siempre. Segundo anillo para Mahomes, que además fue MVP, pese al histórico partido de su derrotado oponente, Jalen Hurts.</p>  
               </div>
-              <div class="carousel-item text-white bg-dark " >
+              <div class="carousel-item text-white bg-dark min-vh-25" >
                 <h4 class="mt-3">NOTICIA 2</h4>
-                <p class="mt-4 mb-5">Jose</p>
+                <p class="mt-4">Jose</p>
               </div>
-              <div class="carousel-item text-white bg-dark " >
+              <div class="carousel-item text-white bg-dark min-vh-25" >
                 <h4 class="mt-3">NOTICIA 3</h4>
-                <p class="mt-4 mb-5">Pablo</p>
+                <p class="mt-4">Pablo</p>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticiasOndaMare" data-bs-slide="prev">
@@ -262,13 +262,25 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid bg-white bg-opacity-75 mt-0">
-      <div class="row pb-5 pt-3">
-        <div class="col-sm-6 text-center">
-          <p>Footer 1</p>
-        </div>
-        <div class="col-sm-6 text-center">
-          <p>Footer 2</p>
+    <div class="container-fluid bg-white bg-opacity-75 ">
+      <div class="row pb-2 pt-3">
+        <div class="col-sm-12 text-center">
+          <p class="font-unbounded">NUESTRAS REDES SOCIALES</p>
+          <div class="row mb-4">
+            <div class="col-sm-3 text-end">
+              <a href="#"><img src="./Images/Instagram.png" width="50"></a>
+            </div>
+            <div class="col-sm-3 text-start pt-3">
+              <a class="link-dark" href="#">@instagram.ONDAMARE</a>
+            </div>
+            <div class="col-sm-3 text-end pt-3">
+              <a class="link-dark" href="#">@facebook.ONDAMARE</a>
+            </div>
+            <div class="col-sm-3 text-start">
+              <a href="#"><img src="./Images/Facebook.png" width="50"></a>
+            </div>
+          </div>
+          <p class="fw-light">Copyright - Página hecha por Aarón Sánchez Stefanov</p>        
         </div>
       </div>
     </div>
