@@ -605,6 +605,17 @@ progress {
   height: auto;
 }
 
+.img-neon{
+  transition: all 750ms;
+}
+
+.img-neon:hover{
+  border-radius:25%;
+  -webkit-border-radius:25%;
+  box-shadow: 0px 0px 15px 15px #ffffff;
+  -webkit-box-shadow: 0px 0px 15px 15px #ffffff;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;

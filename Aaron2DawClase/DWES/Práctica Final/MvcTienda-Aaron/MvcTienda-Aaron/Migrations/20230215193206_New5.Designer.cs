@@ -12,19 +12,19 @@ using MvcTienda_Aaron.Data;
 namespace MvcTienda_Aaron.Migrations
 {
     [DbContext(typeof(MvcTienda_AaronContexto))]
-    [Migration("20230109175015_Inicial")]
-    partial class Inicial
+    [Migration("20230215193206_New5")]
+    partial class New5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("ProductVersion", "6.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("MvcTienda_Aaron.Models.Categoría", b =>
+            modelBuilder.Entity("MvcTienda_Aaron.Models.Categoria", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,11 +99,16 @@ namespace MvcTienda_Aaron.Migrations
                     b.Property<int>("ProductoId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ProductoTallaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("PedidoId");
 
                     b.HasIndex("ProductoId");
+
+                    b.HasIndex("ProductoTallaId");
 
                     b.ToTable("Detalles");
                 });
@@ -177,7 +182,7 @@ namespace MvcTienda_Aaron.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CategoriaId")
+                    b.Property<int?>("CategoriaId")
                         .HasColumnType("int");
 
                     b.Property<string>("Descripcion")
@@ -197,9 +202,6 @@ namespace MvcTienda_Aaron.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Stock")
-                        .HasColumnType("int");
-
                     b.Property<string>("Texto")
                         .HasColumnType("nvarchar(max)");
 
@@ -208,6 +210,49 @@ namespace MvcTienda_Aaron.Migrations
                     b.HasIndex("CategoriaId");
 
                     b.ToTable("Productos");
+                });
+
+            modelBuilder.Entity("MvcTienda_Aaron.Models.ProductoTalla", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("ProductoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Stock")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TallaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductoId");
+
+                    b.HasIndex("TallaId");
+
+                    b.ToTable("ProductosTalla");
+                });
+
+            modelBuilder.Entity("MvcTienda_Aaron.Models.Talla", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Talla");
                 });
 
             modelBuilder.Entity("MvcTienda_Aaron.Models.Detalle", b =>
@@ -224,9 +269,16 @@ namespace MvcTienda_Aaron.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("MvcTienda_Aaron.Models.ProductoTalla", "ProductoTalla")
+                        .WithMany()
+                        .HasForeignKey("ProductoTallaId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.Navigation("Pedido");
 
                     b.Navigation("Producto");
+
+                    b.Navigation("ProductoTalla");
                 });
 
             modelBuilder.Entity("MvcTienda_Aaron.Models.Pedido", b =>
@@ -250,16 +302,32 @@ namespace MvcTienda_Aaron.Migrations
 
             modelBuilder.Entity("MvcTienda_Aaron.Models.Producto", b =>
                 {
-                    b.HasOne("MvcTienda_Aaron.Models.Categoría", "Categoria")
+                    b.HasOne("MvcTienda_Aaron.Models.Categoria", "Categoria")
                         .WithMany("Productos")
                         .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Categoria");
                 });
 
-            modelBuilder.Entity("MvcTienda_Aaron.Models.Categoría", b =>
+            modelBuilder.Entity("MvcTienda_Aaron.Models.ProductoTalla", b =>
+                {
+                    b.HasOne("MvcTienda_Aaron.Models.Producto", "Producto")
+                        .WithMany("ProductoTallas")
+                        .HasForeignKey("ProductoId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("MvcTienda_Aaron.Models.Talla", "Talla")
+                        .WithMany("ProductoTallas")
+                        .HasForeignKey("TallaId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Producto");
+
+                    b.Navigation("Talla");
+                });
+
+            modelBuilder.Entity("MvcTienda_Aaron.Models.Categoria", b =>
                 {
                     b.Navigation("Productos");
                 });
@@ -282,6 +350,13 @@ namespace MvcTienda_Aaron.Migrations
             modelBuilder.Entity("MvcTienda_Aaron.Models.Producto", b =>
                 {
                     b.Navigation("Detalles");
+
+                    b.Navigation("ProductoTallas");
+                });
+
+            modelBuilder.Entity("MvcTienda_Aaron.Models.Talla", b =>
+                {
+                    b.Navigation("ProductoTallas");
                 });
 #pragma warning restore 612, 618
         }
