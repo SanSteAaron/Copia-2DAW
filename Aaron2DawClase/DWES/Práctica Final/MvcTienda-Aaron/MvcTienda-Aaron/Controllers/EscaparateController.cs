@@ -2,9 +2,12 @@
 using MvcTienda_Aaron.Data;
 using MvcTienda_Aaron.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace MvcTienda_Aaron.Controllers
 {
+    [Authorize(Roles = "Usuario")]
     public class EscaparateController : Controller
     {
         private readonly MvcTienda_AaronContexto _context;

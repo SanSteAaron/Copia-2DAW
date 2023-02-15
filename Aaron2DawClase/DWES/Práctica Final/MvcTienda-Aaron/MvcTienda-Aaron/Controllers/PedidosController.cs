@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +12,7 @@ using MvcTienda_Aaron.Models;
 
 namespace MvcTienda_Aaron.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class PedidosController : Controller
     {
         private readonly MvcTienda_AaronContexto _context;
