@@ -1,0 +1,169 @@
+﻿@model MvcTienda_Aaron.Models.Pedido;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="table-container">
+
+    <div class="tabla_carrito">
+        <div class="tablacont">
+            Núm. Pedido
+        </div>
+        <div class="tablacont">
+            Fecha de entrega
+        </div>
+        <div class="tablacont">
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </div>
+        <div class="tablacont">
+            @Html.DisplayNameFor(model => model.Cliente.Direccion)
+        </div>
+        <div class="tablacont">
+            @Html.DisplayNameFor(model => model.Cliente.Poblacion)
+        </div>
+    </div>
+    <div class="tabla2_carrito">
+        <div class="tablacont2">
+            @Html.DisplayFor(model => model.Id)
+        </div>
+        <div class="tablacont2">
+            @{
+                DateTime fechaActual = (DateTime.Now.AddDays(5));
+                string fechaEntrega = fechaActual.ToString("dddd dd MMMM", System.Globalization.CultureInfo.CreateSpecificCulture("es-MX"));
+            }
+            @fechaEntrega
+        </div>
+        <div class="tablacont2">
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </div>
+        <div class="tablacont2">
+            @Html.DisplayFor(model => model.Cliente.Direccion)
+        </div>
+        <div class="tablacont2">
+            @Html.DisplayFor(model => model.Cliente.Poblacion)
+        </div>
+    </div>
+</div>
+
+<div class="table-container">
+
+    <div class="tabla_carrito_detalles">
+        <div class="tablacont">
+        </div>
+        <div class="tablacont">
+            Descripción del producto
+        </div>
+        <div class="tablacont">
+            Cantidad
+        </div>
+        <div class="tablacont">
+            Precio
+        </div>
+        <div class="tablacont">
+            Descuento
+        </div>
+        <div class="tablacont">
+            Total
+        </div>
+        <div class="tablacont">
+        </div>
+    </div>
+
+    @foreach (var item in Model.Detalles)
+    {
+        <div class="tabla2_carrito_detalles">
+            <div class="tablacont2">
+                @{
+                    var nombreImagen = "imagen-no-disponible.jpg";
+                    if (item.Producto.Imagen != null)
+                    {
+                        nombreImagen = item.Producto.Imagen;
+                    }
+                }
+                <img style="width:100px; height:100px;" src="~/imagenes/@nombreImagen" alt="No funciona" asp-append-version="true" />
+            </div>
+            <div class="tablacont2">
+                @Html.DisplayFor(modelItem => item.Producto.Descripcion)
+                @Html.DisplayFor(modelItem => item.ProductoTalla.Talla)
+            </div>
+            <div class="tablacont2">
+                @if (item.Cantidad <= 1)
+                {
+                    <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo" style="visibility:hidden">-</a>
+                }
+                else
+                {
+                    <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo">-</a>
+                }
+
+                @Html.DisplayFor(modelItem => item.Cantidad)
+
+                @if (item.ProductoTalla.Stock == item.Cantidad)
+                {
+                    <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo" style="visibility:hidden">+</a>
+                }
+                else
+                {
+                    <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo">+</a>
+                }
+            </div>
+            <div class="tablacont2">
+                @Html.DisplayFor(modelItem => item.Producto.Precio) €
+            </div>
+            <div class="tablacont2">
+                0,00
+            </div>
+            <div class="tablacont2">
+                @{
+                    decimal precio = 0;
+                    decimal total = 0;
+
+
+                    precio = item.Precio * item.Cantidad;
+
+                    total = total + precio;
+                }
+                <p>@precio</p>
+            </div>
+            <div class="tablacont">
+                <form asp-action="EliminarLinea">
+                    <input class="btn btn-danger" type="submit" value="Eliminar" asp-action="EliminarLinea" asp-controller="Carrito" asp-route-id="@item.Id" />
+                </form>
+            </div>
+        </div>
+    }
+    @{
+        decimal totalProducto = 0;
+        decimal totalFinal = 0;
+    }
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <h3>Total:</h3>
+
+    @foreach (var item in Model.Detalles)
+    {
+        totalProducto = item.Precio * item.Cantidad;
+        totalFinal = totalFinal + totalProducto;
+    }
+    <p>@totalFinal</p>
+
+
+
+    <form asp-action="ConfirmarPedido" class="container-fluid text-center">
+        <input class="btn btn-success" type="submit" value="Confirmar Pedido" asp-action="ConfirmarPedido" asp-controller="Carrito" asp-route-id="@Model.Id" />
+    </form>
+
+
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<a asp-action="Index" asp-controller="Escaparate">Seguir Comprando</a>
+
