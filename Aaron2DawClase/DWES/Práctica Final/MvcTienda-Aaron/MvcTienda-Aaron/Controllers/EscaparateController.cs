@@ -69,8 +69,7 @@ namespace MvcTienda_Aaron.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> AñadirCarrito(int id)
         {
-            var producto = await _context.Productos
-                            .FirstOrDefaultAsync(m => m.Id == id);
+            var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == id);
 
             if (producto == null)
             {
@@ -82,7 +81,7 @@ namespace MvcTienda_Aaron.Controllers
 
             Cliente usuario = await _context.Clientes.Where(p => p.Email == User.Identity.Name).FirstOrDefaultAsync();
 
-            if (HttpContext.Session.GetString("NumPedido") == null)
+            if (HttpContext.Session.GetString("Núm. Pedido") == null)
             {
                 pedido.Fecha = DateTime.Now;
                 pedido.Confirmado = null;
@@ -99,10 +98,10 @@ namespace MvcTienda_Aaron.Controllers
                     await _context.SaveChangesAsync();
                 }
 
-                HttpContext.Session.SetString("NumPedido", pedido.Id.ToString());
+                HttpContext.Session.SetString("Núm. Pedido", pedido.Id.ToString());
             }
 
-            string strNumeroPedido = HttpContext.Session.GetString("NumPedido");
+            string strNumeroPedido = HttpContext.Session.GetString("Núm. Pedido");
             detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
 
             detalle.ProductoId = id;

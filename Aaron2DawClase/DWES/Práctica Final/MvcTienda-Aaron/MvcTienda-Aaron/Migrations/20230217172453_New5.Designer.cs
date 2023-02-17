@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcTienda_Aaron.Data;
 
@@ -11,9 +12,10 @@ using MvcTienda_Aaron.Data;
 namespace MvcTienda_Aaron.Migrations
 {
     [DbContext(typeof(MvcTienda_AaronContexto))]
-    partial class MvcTienda_AaronContextoModelSnapshot : ModelSnapshot
+    [Migration("20230217172453_New5")]
+    partial class New5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -85,7 +85,6 @@
             </div>
             <div class="tablacont2">
                 @Html.DisplayFor(modelItem => item.Producto.Descripcion)
-                @Html.DisplayFor(modelItem => item.ProductoTalla.Talla)
             </div>
             <div class="tablacont2">
                 @if (item.Cantidad <= 1)
@@ -99,7 +98,7 @@
 
                 @Html.DisplayFor(modelItem => item.Cantidad)
 
-                @if (item.ProductoTalla.Stock == item.Cantidad)
+              @*  @if (item.ProductoTalla.Stock == item.Cantidad)*@
                 {
                     <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo" style="visibility:hidden">+</a>
                 }

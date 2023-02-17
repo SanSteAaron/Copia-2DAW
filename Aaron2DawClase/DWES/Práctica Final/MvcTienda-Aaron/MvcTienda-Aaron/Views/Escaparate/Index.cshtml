@@ -55,7 +55,7 @@
                                     {
                                         if(talla.Id == stock.TallaId)
                                         {
-                                            <input type="radio" class="btn-check" name="@stock.ProductoId" id="@stock.Id" autocomplete="off">
+                                            <input type="radio" class="btn-check" name="ProductoSeleccionado" id="@stock.Id" autocomplete="off" value="@talla.Descripcion">
                                             <label class="btn btn-sm btn-outline-warning w-100 mt-1" for="@stock.Id">@talla.Descripcion - @stock.Stock Disponibles</label>
                                         }
                                     }

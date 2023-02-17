@@ -15,7 +15,7 @@ namespace MvcTienda_Aaron.Controllers
         public async Task<IActionResult> Index()
         {
             int intNumeroPedido = 0;
-            string numeroPedido = HttpContext.Session.GetString("NumPedido");
+            string numeroPedido = HttpContext.Session.GetString("Núm. Pedido");
             if (numeroPedido == null)
             {
 
