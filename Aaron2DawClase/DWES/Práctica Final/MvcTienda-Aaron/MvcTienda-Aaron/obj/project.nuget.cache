@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dddmGdcS5MuGBJ07IsOU6EXf7OCb6n5bqcFXbxeMbrz+dxNdXhPfpH4nf/9txe8gxbEINlIrvG2V0vVJN0KWdw==",
+  "dgSpecHash": "q7lrGyQlDKZm43TEBbOwFr3qBYExxd3MM/sKdjfmbf+qUu4TgQvsPZPkVcBd+1HpF106qnHDPM9uV7C98GQ6+g==",
   "success": true,
-  "projectFilePath": "D:\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
+  "projectFilePath": "C:\\Users\\aarsanste\\Documents\\GitHub\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aarsanste\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aarsanste\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

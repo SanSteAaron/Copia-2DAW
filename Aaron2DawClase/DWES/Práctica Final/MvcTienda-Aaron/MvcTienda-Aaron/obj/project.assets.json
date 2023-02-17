@@ -10465,11 +10465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
+      "projectUniqueName": "C:\\Users\\aarsanste\\Documents\\GitHub\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
       "projectName": "MvcTienda-Aaron",
-      "projectPath": "D:\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
+      "projectPath": "C:\\Users\\aarsanste\\Documents\\GitHub\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
       "packagesPath": "C:\\Users\\aarsanste\\.nuget\\packages\\",
-      "outputPath": "D:\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\obj\\",
+      "outputPath": "C:\\Users\\aarsanste\\Documents\\GitHub\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
