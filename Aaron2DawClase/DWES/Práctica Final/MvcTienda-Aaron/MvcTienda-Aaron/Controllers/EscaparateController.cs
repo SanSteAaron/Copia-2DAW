@@ -1,87 +1,81 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MvcTienda_Aaron.Data;
 using MvcTienda_Aaron.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
-using System.Data;
 
 namespace MvcTienda_Aaron.Controllers
 {
-    [Authorize(Roles = "Usuario")]
     public class EscaparateController : Controller
     {
         private readonly MvcTienda_AaronContexto _context;
-
         public EscaparateController(MvcTienda_AaronContexto context)
         {
             _context = context;
         }
 
-        // GET: Escaparate
+        //GET : Escaparate
         public async Task<IActionResult> Index(int? id)
         {
-            var productos = _context.Productos.AsQueryable();
-            var tallas = _context.Talla.AsQueryable();
-
-            if (id == null)
+            var producto = _context.Productos.AsQueryable();
+            var productotallas = _context.ProductosTalla.AsQueryable();
+            ViewData["Listacategorias"] = _context.Categorias.AsQueryable();
+            ViewData["Listatallas"] = _context.Talla.AsQueryable();
+            ViewData["Listaproductos"] = producto.Where(p => p.Escaparate == true);
+            if(id != null)
             {
-                productos = productos.Where(x => x.Escaparate == true);
+                ViewData["Listaproductos"] = producto.Where(p => p.CategoriaId == id);
             }
-            else
-            {
-                productos = productos.Where(x => x.CategoriaId == id);
-
-                ViewBag.DescripcionCategoría = _context.Categorias.Find(id).Descripcion.ToString();
-            }
-
-            ViewData["Listacategorias"] = _context.Categorias.OrderBy(c => c.Descripcion).ToList();
-            ViewData["Listastock"] = _context.ProductosTalla.AsQueryable();
-            ViewData["Listatallas"] = tallas;
-
-            productos = productos.Include(a => a.Categoria);
-
-            return View(await productos.ToListAsync());
+            return View(await productotallas.ToListAsync());
         }
 
         //GET AñadirCarrito
-        public async Task<ActionResult> AñadirCarrito(int? id)
+        public async Task<IActionResult> AñadirCarrito(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var producto = await _context.Productos
-                            .Include(p => p.Categoria)
+            var productotalla = await _context.ProductosTalla
                             .FirstOrDefaultAsync(m => m.Id == id);
 
-            if (producto == null)
+            var producto = _context.Productos.AsQueryable();
+            ViewData["ProductoAñadir"] = producto.Where(producto => producto.Id == productotalla.ProductoId);
+            var talla = _context.Talla.AsQueryable();
+            ViewData["TallaProducto"] = talla.Where(talla => talla.Id == productotalla.TallaId);
+
+            if (productotalla == null)
             {
                 return NotFound();
             }
 
-            return View(producto);
+            return View(productotalla);
         }
 
-        //POST Escaparate/AgregarCarrito/5
-
+        //POST: Escaparate/AgregarCarrito/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> AñadirCarrito(int id)
+        public async Task <ActionResult> AñadirCarrito(int id)
         {
-            var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == id);
+            var productotalla = await _context.ProductosTalla.FirstOrDefaultAsync(m => m.Id == id);
+            //var productotallaQuery = _context.ProductosTalla.AsQueryable();
+            //var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == productotallaQuery.)
 
-            if (producto == null)
+            if(productotalla == null)
             {
                 return NotFound();
             }
+
+            //if(producto == null)
+            //{
+            //    return NotFound();
+            //}
 
             Pedido pedido = new Pedido();
             Detalle detalle = new Detalle();
 
-            Cliente usuario = await _context.Clientes.Where(p => p.Email == User.Identity.Name).FirstOrDefaultAsync();
-
-            if (HttpContext.Session.GetString("Núm. Pedido") == null)
+            Cliente cliente = await _context.Clientes.Where(c => c.Email == User.Identity.Name).FirstOrDefaultAsync();
+            if(HttpContext.Session.GetString("Núm. Pedido") == null)
             {
                 pedido.Fecha = DateTime.Now;
                 pedido.Confirmado = null;
@@ -90,7 +84,7 @@ namespace MvcTienda_Aaron.Controllers
                 pedido.Cobrado = null;
                 pedido.Devuelto = null;
                 pedido.Anulado = null;
-                pedido.ClienteId = usuario.Id;
+                pedido.ClienteId = cliente.Id;
                 pedido.EstadoId = 1;
                 if (ModelState.IsValid)
                 {
@@ -100,13 +94,12 @@ namespace MvcTienda_Aaron.Controllers
 
                 HttpContext.Session.SetString("Núm. Pedido", pedido.Id.ToString());
             }
-
             string strNumeroPedido = HttpContext.Session.GetString("Núm. Pedido");
             detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
 
-            detalle.ProductoId = id;
+            //detalle.ProductoId = producto.Id;
             detalle.Cantidad = 1;
-            detalle.Precio = producto.Precio;
+            //detalle.Precio = producto.Precio;
             detalle.Descuento = 0;
             if (ModelState.IsValid)
             {
@@ -115,7 +108,6 @@ namespace MvcTienda_Aaron.Controllers
             }
 
             return RedirectToAction(nameof(Index));
-
         }
     }
 }

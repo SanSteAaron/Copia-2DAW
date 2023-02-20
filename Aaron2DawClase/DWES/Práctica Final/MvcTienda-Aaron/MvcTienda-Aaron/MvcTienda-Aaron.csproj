@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\EscaparateController.cs~RF31ef82.TMP" />
     <None Remove="Controllers\HomeController.cs~RF34107d.TMP" />
+    <None Remove="Views\Escaparate\AñadirCarrito.cshtml~RFd7f2a7.TMP" />
   </ItemGroup>
 
   <ItemGroup>
