@@ -81,7 +81,7 @@
                         nombreImagen = item.Producto.Imagen;
                     }
                 }
-                <img style="width:100px; height:100px;" src="~/imagenes/@nombreImagen" alt="No funciona" asp-append-version="true" />
+                <img style="width:100px; height:100px;" src="~/images/@nombreImagen" alt="No funciona" asp-append-version="true" />
             </div>
             <div class="tablacont2">
                 @Html.DisplayFor(modelItem => item.Producto.Descripcion)
@@ -89,22 +89,22 @@
             <div class="tablacont2">
                 @if (item.Cantidad <= 1)
                 {
-                    <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo" style="visibility:hidden">-</a>
+                    <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="" style="visibility:hidden">-</a>
                 }
                 else
                 {
-                    <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo">-</a>
+                    <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="">-</a>
                 }
 
                 @Html.DisplayFor(modelItem => item.Cantidad)
 
-              @*  @if (item.ProductoTalla.Stock == item.Cantidad)*@
+                @if (item.ProductoTalla.Stock == item.Cantidad)
                 {
-                    <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo" style="visibility:hidden">+</a>
+                    <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="" style="visibility:hidden">+</a>
                 }
                 else
                 {
-                    <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="Anyadir_redondo">+</a>
+                    <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="">+</a>
                 }
             </div>
             <div class="tablacont2">

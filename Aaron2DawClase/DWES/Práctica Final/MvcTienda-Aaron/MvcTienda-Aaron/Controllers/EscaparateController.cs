@@ -57,19 +57,19 @@ namespace MvcTienda_Aaron.Controllers
         [ValidateAntiForgeryToken]
         public async Task <ActionResult> AñadirCarrito(int id)
         {
-            var productotalla = await _context.ProductosTalla.FirstOrDefaultAsync(m => m.Id == id);
-            //var productotallaQuery = _context.ProductosTalla.AsQueryable();
-            //var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == productotallaQuery.)
-
-            if(productotalla == null)
+            //var productotalla = await _context.ProductosTalla.FirstOrDefaultAsync(m => m.Id == id);
+            ProductoTalla productotalla = await _context.ProductosTalla.Where(c => c.Id == id).FirstOrDefaultAsync();
+            //var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == productotalla.ProductoId);
+            Producto producto = await _context.Productos.Where(c => c.Id == productotalla.ProductoId).FirstOrDefaultAsync();
+            if (productotalla == null)
             {
                 return NotFound();
             }
 
-            //if(producto == null)
-            //{
-            //    return NotFound();
-            //}
+            if (producto == null)
+            {
+                return NotFound();
+            }
 
             Pedido pedido = new Pedido();
             Detalle detalle = new Detalle();
@@ -97,9 +97,10 @@ namespace MvcTienda_Aaron.Controllers
             string strNumeroPedido = HttpContext.Session.GetString("Núm. Pedido");
             detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
 
-            //detalle.ProductoId = producto.Id;
+            detalle.ProductoTallaId = productotalla.Id;
+            detalle.ProductoId = producto.Id;
             detalle.Cantidad = 1;
-            //detalle.Precio = producto.Precio;
+            detalle.Precio = producto.Precio;
             detalle.Descuento = 0;
             if (ModelState.IsValid)
             {

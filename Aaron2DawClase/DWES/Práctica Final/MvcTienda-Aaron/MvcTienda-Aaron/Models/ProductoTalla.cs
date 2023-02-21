@@ -7,6 +7,7 @@
         public Producto? Producto { get; set; }
         public int? TallaId { get; set; }
         public Talla? Talla { get; set; }
-        public int? Stock { get; set; }    
+        public int? Stock { get; set; }
+        public ICollection<Detalle>? Detalles { get; set; }
     }
 }

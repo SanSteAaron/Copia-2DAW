@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcTienda_Aaron.Data;
+using MvcTienda_Aaron.Models;
 
 namespace MvcTienda_Aaron.Controllers
 {
@@ -29,6 +30,8 @@ namespace MvcTienda_Aaron.Controllers
                                 .Include(x => x.Estado)
                                 .Include(x => x.Detalles)
                                 .ThenInclude(x => x.Producto)
+                                .Include(x => x.Detalles)
+                                .ThenInclude(x => x.ProductoTalla)
                                 .FirstOrDefaultAsync(e => e.Id == intNumeroPedido);
 
             if (pedido == null)
@@ -77,16 +80,16 @@ namespace MvcTienda_Aaron.Controllers
             var detalle = await _context.Detalles.FindAsync(id);
             detalle.Cantidad = detalle.Cantidad + 1;
 
-            var producto = await _context.Productos.FindAsync(detalle.ProductoId);
-            var productoTalla = await _context.ProductosTalla.FirstOrDefaultAsync(p => p.ProductoId == producto.Id);
-            productoTalla.Stock = productoTalla.Stock - 1;
+            //var producto = await _context.Productos.FindAsync(detalle.ProductoId);
+            //var productoTalla = await _context.ProductosTalla.FirstOrDefaultAsync(p => p.ProductoId == producto.Id);
+            //productoTalla.Stock = productoTalla.Stock - 1;       
 
             if (ModelState.IsValid)
             {
                 try
                 {
                     _context.Update(detalle);
-                    _context.Update(productoTalla);
+                    //_context.Update(productoTalla);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -116,16 +119,14 @@ namespace MvcTienda_Aaron.Controllers
             var detalle = await _context.Detalles.FindAsync(id);
             detalle.Cantidad = detalle.Cantidad - 1;
 
-            var producto = await _context.Productos.FindAsync(detalle.ProductoId);
-            var productoTalla = await _context.ProductosTalla.FirstOrDefaultAsync(p => p.ProductoId == producto.Id);
-            productoTalla.Stock = productoTalla.Stock + 1;
+            
 
             if (ModelState.IsValid)
             {
                 try
                 {
                     _context.Update(detalle);
-                    _context.Update(productoTalla);
+                    //_context.Update(productoTalla);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -158,7 +159,9 @@ namespace MvcTienda_Aaron.Controllers
 
             var pedido = await _context.Pedidos.FindAsync(id);
 
-
+            var detalle = await _context.Detalles.FirstOrDefaultAsync(p => p.PedidoId == id);
+            var productoTalla = await _context.ProductosTalla.FindAsync(detalle.ProductoTallaId);
+            productoTalla.Stock = productoTalla.Stock - detalle.Cantidad;
             // Se cambia el estado del pedido a confirmado
 
             pedido.EstadoId = 2;
@@ -169,6 +172,7 @@ namespace MvcTienda_Aaron.Controllers
                 try
                 {
                     _context.Update(pedido);
+                    _context.Update(productoTalla);
                     await _context.SaveChangesAsync();
                     // Al confirmar el pedido se pone la variable de sesion del pedido actual a null
                     HttpContext.Session.Remove("NumPedido");

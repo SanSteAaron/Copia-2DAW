@@ -17,6 +17,8 @@ namespace MvcTienda_Aaron.Models
         public decimal Precio { get; set; }
         [Display(Name = "decimal(18, 2)")]
         public decimal Descuento { get; set; }
+        public int ProductoTallaId { get; set; }
+        [Display(Name = "Id.ProductoTalla")]
         public virtual ProductoTalla? ProductoTalla { get; set; }
         public virtual Producto? Producto { get; set; }
         public virtual Pedido? Pedido { get; set; }

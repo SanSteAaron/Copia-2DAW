@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcTienda_Aaron.Data;
 
@@ -11,9 +12,10 @@ using MvcTienda_Aaron.Data;
 namespace MvcTienda_Aaron.Migrations
 {
     [DbContext(typeof(MvcTienda_AaronContexto))]
-    partial class MvcTienda_AaronContextoModelSnapshot : ModelSnapshot
+    [Migration("20230221183140_New8")]
+    partial class New8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -268,7 +270,7 @@ namespace MvcTienda_Aaron.Migrations
                         .IsRequired();
 
                     b.HasOne("MvcTienda_Aaron.Models.ProductoTalla", "ProductoTalla")
-                        .WithMany("Detalles")
+                        .WithMany()
                         .HasForeignKey("ProductoTallaId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -351,11 +353,6 @@ namespace MvcTienda_Aaron.Migrations
                     b.Navigation("Detalles");
 
                     b.Navigation("ProductoTallas");
-                });
-
-            modelBuilder.Entity("MvcTienda_Aaron.Models.ProductoTalla", b =>
-                {
-                    b.Navigation("Detalles");
                 });
 
             modelBuilder.Entity("MvcTienda_Aaron.Models.Talla", b =>
