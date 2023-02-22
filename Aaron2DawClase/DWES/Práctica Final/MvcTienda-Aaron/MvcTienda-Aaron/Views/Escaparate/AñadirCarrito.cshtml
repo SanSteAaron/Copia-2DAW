@@ -5,11 +5,12 @@
 }
 
 <div class="justify-content-center text-center col-lg-12 col-md-12 col-sm-12">
-    <h3>Añadir al carrito</h3>
+    <h1 class="text-brown">Añadir al carrito</h1>
     <hr />
+    <br/>
     @foreach (var item in ViewData["ProductoAñadir"] as IEnumerable<Producto>)
     {
-        <div class="card shadow d-inline-block align-middle m-3" style="width:600px; height:800px; text-align:center">
+        <div class="card shadow d-inline-block align-middle text-brown" style="width:600px; height:800px; text-align:center">
             <div>
                 @{
                     var nombreImagen = "error.png";
@@ -21,7 +22,7 @@
                 <img class="card-img-top" style="width:500px; height:500px; margin:20px;" src="~/images/@nombreImagen">
             </div>
             <div class="card-body" style="height:300px;">
-                <p class="card-text display-5" style="height:30px;">@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                <h3 class="card-text text-uppercase fw-bold" style="height:40px;">@Html.DisplayFor(modelItem => item.Descripcion)</h3>
                 <br/>
                 <h4 class="fw-light">
                     @item.PrecioCadena€
@@ -40,7 +41,7 @@
                         @Html.DisplayFor(model => model.Id)
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Añadir al carrito" class="btn btn-dark w-100" asp-action="AñadirCarrito" />
+                        <input type="submit" value="Añadir al carrito" class="btn btn-outline-brown w-100" asp-action="AñadirCarrito" />
                     </div>
                 </form>
             </div>

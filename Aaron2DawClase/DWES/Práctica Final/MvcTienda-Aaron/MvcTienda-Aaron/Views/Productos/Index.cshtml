@@ -55,7 +55,15 @@
                 @Html.DisplayFor(modelItem => item.Escaparate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Imagen)
+                <div>
+                        @{
+                            var nombreimagen = "error.png";
+                            if(item.Imagen != null){
+                                nombreimagen = item.Imagen;
+                            }
+                        }
+                        <img src="~/images/@nombreimagen" height="100" width="100" asp-append-version="true"/>
+                </div>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Categoria.Descripcion)

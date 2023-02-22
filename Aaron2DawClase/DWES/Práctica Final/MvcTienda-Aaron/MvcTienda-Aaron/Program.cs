@@ -57,7 +57,7 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Escaparate}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 // Crear los roles y el administrador predeterminados

@@ -48,6 +48,7 @@
     --bs-white-rgb: 255, 255, 255;
     --bs-black-rgb: 0, 0, 0;
     --bs-body-rgb: 33, 37, 41;
+    --bs-brown-rgb:69, 43, 26; 
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -3402,6 +3403,37 @@ textarea.form-control-lg {
   color: #212529;
   background-color: transparent;
 }
+
+.btn-outline-brown {
+    color: #452b1a;
+    border-color: #452b1a;
+}
+
+.btn-outline-brown:hover {
+    color: #fff;
+    background-color: #452b1a;
+    border-color: #452b1a;
+}
+
+.btn-check:focus + .btn-outline-brown, .btn-outline-brown:focus {
+    box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+}
+
+.btn-check:checked + .btn-outline-brown, .btn-check:active + .btn-outline-brown, .btn-outline-brown:active, .btn-outline-brown.active, .btn-outline-brown.dropdown-toggle.show {
+    color: #fff;
+    background-color: #452b1a;
+    border-color: #452b1a;
+}
+
+.btn-check:checked + .btn-outline-brown:focus, .btn-check:active + .btn-outline-brown:focus, .btn-outline-brown:active:focus, .btn-outline-brown.active:focus, .btn-outline-brown.dropdown-toggle.show:focus {
+    box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+}
+
+.btn-outline-brown:disabled, .btn-outline-brown.disabled {
+    color: #452b1a;
+    background-color: transparent;
+}
+
 
 .btn-link {
   font-weight: 400;
@@ -7700,7 +7732,7 @@ textarea.form-control-lg {
 
 .text-brown {
     --bs-text-opacity: 1;
-    color: rgba(var(--bs-brown), var(--bs-text-opacity)) !important;
+    color: rgba(var(--bs-brown-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-body {

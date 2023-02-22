@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcTienda_Aaron.Data;
 using MvcTienda_Aaron.Models;
@@ -57,58 +59,66 @@ namespace MvcTienda_Aaron.Controllers
         [ValidateAntiForgeryToken]
         public async Task <ActionResult> AñadirCarrito(int id)
         {
-            //var productotalla = await _context.ProductosTalla.FirstOrDefaultAsync(m => m.Id == id);
-            ProductoTalla productotalla = await _context.ProductosTalla.Where(c => c.Id == id).FirstOrDefaultAsync();
-            //var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == productotalla.ProductoId);
-            Producto producto = await _context.Productos.Where(c => c.Id == productotalla.ProductoId).FirstOrDefaultAsync();
-            if (productotalla == null)
+            if(User.Identity.Name != null)
             {
-                return NotFound();
-            }
+                //var productotalla = await _context.ProductosTalla.FirstOrDefaultAsync(m => m.Id == id);
+                ProductoTalla productotalla = await _context.ProductosTalla.Where(c => c.Id == id).FirstOrDefaultAsync();
+                //var producto = await _context.Productos.FirstOrDefaultAsync(m => m.Id == productotalla.ProductoId);
+                Producto producto = await _context.Productos.Where(c => c.Id == productotalla.ProductoId).FirstOrDefaultAsync();
+                if (productotalla == null)
+                {
+                    return NotFound();
+                }
 
-            if (producto == null)
-            {
-                return NotFound();
-            }
+                if (producto == null)
+                {
+                    return NotFound();
+                }
 
-            Pedido pedido = new Pedido();
-            Detalle detalle = new Detalle();
+                Pedido pedido = new Pedido();
+                Detalle detalle = new Detalle();
 
-            Cliente cliente = await _context.Clientes.Where(c => c.Email == User.Identity.Name).FirstOrDefaultAsync();
-            if(HttpContext.Session.GetString("Núm. Pedido") == null)
-            {
-                pedido.Fecha = DateTime.Now;
-                pedido.Confirmado = null;
-                pedido.Preparado = null;
-                pedido.Enviado = null;
-                pedido.Cobrado = null;
-                pedido.Devuelto = null;
-                pedido.Anulado = null;
-                pedido.ClienteId = cliente.Id;
-                pedido.EstadoId = 1;
+                Cliente cliente = await _context.Clientes.Where(c => c.Email == User.Identity.Name).FirstOrDefaultAsync();
+                if (HttpContext.Session.GetString("Núm. Pedido") == null)
+                {
+                    pedido.Fecha = DateTime.Now;
+                    pedido.Confirmado = null;
+                    pedido.Preparado = null;
+                    pedido.Enviado = null;
+                    pedido.Cobrado = null;
+                    pedido.Devuelto = null;
+                    pedido.Anulado = null;
+                    pedido.ClienteId = cliente.Id;
+                    pedido.EstadoId = 1;
+                    if (ModelState.IsValid)
+                    {
+                        _context.Add(pedido);
+                        await _context.SaveChangesAsync();
+                    }
+
+                    HttpContext.Session.SetString("Núm. Pedido", pedido.Id.ToString());
+                }
+                string strNumeroPedido = HttpContext.Session.GetString("Núm. Pedido");
+                detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
+
+                detalle.ProductoTallaId = productotalla.Id;
+                detalle.ProductoId = producto.Id;
+                detalle.Cantidad = 1;
+                detalle.Precio = producto.Precio;
+                detalle.Descuento = 0;
                 if (ModelState.IsValid)
                 {
-                    _context.Add(pedido);
+                    _context.Add(detalle);
                     await _context.SaveChangesAsync();
                 }
 
-                HttpContext.Session.SetString("Núm. Pedido", pedido.Id.ToString());
+                return RedirectToAction(nameof(Index), "Carrito");
             }
-            string strNumeroPedido = HttpContext.Session.GetString("Núm. Pedido");
-            detalle.PedidoId = Convert.ToInt32(strNumeroPedido);
-
-            detalle.ProductoTallaId = productotalla.Id;
-            detalle.ProductoId = producto.Id;
-            detalle.Cantidad = 1;
-            detalle.Precio = producto.Precio;
-            detalle.Descuento = 0;
-            if (ModelState.IsValid)
+            else
             {
-                _context.Add(detalle);
-                await _context.SaveChangesAsync();
+                return LocalRedirect("~/Identity/Account/Login");
             }
-
-            return RedirectToAction(nameof(Index));
+           
         }
     }
 }

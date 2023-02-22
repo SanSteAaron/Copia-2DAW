@@ -172,10 +172,9 @@ namespace MvcTienda_Aaron.Controllers
                 try
                 {
                     _context.Update(pedido);
-                    _context.Update(productoTalla);
                     await _context.SaveChangesAsync();
                     // Al confirmar el pedido se pone la variable de sesion del pedido actual a null
-                    HttpContext.Session.Remove("NumPedido");
+                    HttpContext.Session.Remove("Núm. Pedido");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
