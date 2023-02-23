@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using MvcTienda_Aaron;
 using MvcTienda_Aaron.Data;
 using MvcTienda_Aaron.Models;
 
@@ -23,7 +24,7 @@ namespace MvcTienda.Controllers
 
 
         // GET: MisPedidos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pagenumber)
         {
             //var mvcTiendaContexto = _context.Pedidos.Include(p => p.Cliente).Include(p => p.Estado);
             //return View(await mvcTiendaContexto.ToListAsync());
@@ -40,17 +41,17 @@ namespace MvcTienda.Controllers
                 return RedirectToAction("Index", "Escaparate");
             }
             // Se seleccionan los avisos del Empleado correspondiente al usuario actual
-            var misPedidos = _context.Pedidos
+
+            var misPedidos = from s in _context.Pedidos
             .Where(a => a.ClienteId == cliente.Id)
             .OrderByDescending(a => a.Fecha)
             .Include(a => a.Cliente)
             .Include(a => a.Detalles)
-            .Include(a => a.Estado);
-            return View(await misPedidos.ToListAsync());
-            // var mvcSoporteContexto = _context.Avisos.Include(a => a.Empleado)
-            // .Include(a => a.Equipo).Include(a => a.TipoAveria);
-            // return View(await mvcSoporteContexto.ToListAsync());
-
+            .Include(a => a.Estado)
+            .Where(p => p.EstadoId != 1)select s;
+            int pageSize = 5;
+            return View(await PaginatedList<Pedido>.CreateAsync(misPedidos.AsNoTracking(),
+            pagenumber ?? 1, pageSize));
         }
 
         // GET: MisPedidos/Details/5
@@ -66,6 +67,9 @@ namespace MvcTienda.Controllers
                 .Include(p => p.Estado)
                 .Include(p => p.Detalles)
                 .ThenInclude(p => p.Producto)
+                .Include(p => p.Detalles)
+                .ThenInclude(p => p.ProductoTalla)
+                .ThenInclude(p => p.Talla)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (pedido == null)
             {

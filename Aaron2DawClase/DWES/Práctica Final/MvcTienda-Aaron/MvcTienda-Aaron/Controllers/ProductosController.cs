@@ -27,10 +27,18 @@ namespace MvcTienda_Aaron.Controllers
         }
 
         // GET: Productos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string strCadenaBusqueda)
         {
-            var mvcTienda_AaronContexto = _context.Productos.Include(p => p.Categoria);
-            return View(await mvcTienda_AaronContexto.ToListAsync());
+            var mvcTienda_AaronContexto = _context.Productos.AsQueryable();
+            ViewData["BusquedaActual"] = strCadenaBusqueda;
+            if (!String.IsNullOrEmpty(strCadenaBusqueda))
+            {
+                mvcTienda_AaronContexto = mvcTienda_AaronContexto.Where(s => s.Descripcion.Contains(strCadenaBusqueda));
+            }
+
+            mvcTienda_AaronContexto = mvcTienda_AaronContexto.Include(p => p.Categoria);
+
+            return View(await mvcTienda_AaronContexto.AsNoTracking().ToListAsync());
         }
 
         // GET: Productos/Details/5

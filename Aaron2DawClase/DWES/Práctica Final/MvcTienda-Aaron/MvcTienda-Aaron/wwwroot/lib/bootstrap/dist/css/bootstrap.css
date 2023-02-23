@@ -10271,6 +10271,10 @@ textarea.form-control-lg {
     margin-top: 3rem !important;
   }
 
+    .mt-xl-6 {
+        margin-top: 5rem !important;
+    }
+
   .mt-xl-auto {
     margin-top: auto !important;
   }

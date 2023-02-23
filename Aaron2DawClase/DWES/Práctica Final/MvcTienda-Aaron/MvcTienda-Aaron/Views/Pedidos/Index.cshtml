@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcTienda_Aaron.Models.Pedido>
+﻿@model PaginatedList<MvcTienda_Aaron.Models.Pedido>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,31 +13,40 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Fecha)
+                Fecha
+                @* @Html.DisplayNameFor(model => model.Fecha)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Confirmado)
+                Confirmado
+                @* @Html.DisplayNameFor(model => model.Confirmado)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Preparado)
+                Preparado
+                @*@Html.DisplayNameFor(model => model.Preparado)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Enviado)
+                Enviado
+                @*@Html.DisplayNameFor(model => model.Enviado)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cobrado)
+                Cobrado
+                @*@Html.DisplayNameFor(model => model.Cobrado)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Devuelto)
+                Devuelto
+                @*  @Html.DisplayNameFor(model => model.Devuelto)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Anulado)
+                Anulado
+                @*@Html.DisplayNameFor(model => model.Anulado)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cliente)
+                Cliente
+                @* @Html.DisplayNameFor(model => model.Cliente)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Estado)
+                Estado
+                @*@Html.DisplayNameFor(model => model.Estado)*@
             </th>
             <th></th>
         </tr>
@@ -81,3 +90,18 @@
 }
     </tbody>
 </table>
+
+@* Poner botones de página Siguiente y Anterior *@
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)"
+   class="btn btn-outline-brown @prevDisabled">
+    Anterior
+</a>
+<a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)"
+   class="btn btn-outline-brown @nextDisabled">
+    Siguiente
+</a>
+

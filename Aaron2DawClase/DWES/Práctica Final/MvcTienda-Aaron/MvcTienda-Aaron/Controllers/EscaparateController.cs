@@ -18,6 +18,15 @@ namespace MvcTienda_Aaron.Controllers
         //GET : Escaparate
         public async Task<IActionResult> Index(int? id)
         {
+            string? emailUsuario = User.Identity.Name;
+            Cliente? empleado = _context.Clientes.Where(c => c.Email == emailUsuario)
+            .FirstOrDefault();
+
+            if(User.Identity.IsAuthenticated && User.IsInRole("Usuario") && empleado == null)
+            {
+                return RedirectToAction("Create", "MisDatos");
+            }
+
             var producto = _context.Productos.AsQueryable();
             var productotallas = _context.ProductosTalla.AsQueryable();
             ViewData["Listacategorias"] = _context.Categorias.AsQueryable();
@@ -59,7 +68,7 @@ namespace MvcTienda_Aaron.Controllers
         [ValidateAntiForgeryToken]
         public async Task <ActionResult> AñadirCarrito(int id)
         {
-            if(User.Identity.Name != null)
+            if(User.Identity.Name != null && User.Identity.Name != "admin@empresa.com")
             {
                 //var productotalla = await _context.ProductosTalla.FirstOrDefaultAsync(m => m.Id == id);
                 ProductoTalla productotalla = await _context.ProductosTalla.Where(c => c.Id == id).FirstOrDefaultAsync();

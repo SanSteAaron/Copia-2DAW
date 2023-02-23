@@ -65,7 +65,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
-    SeedData.InitializeAsync(services).Wait();
+     SeedData.InitializeAsync(services).Wait();
 }
 
 

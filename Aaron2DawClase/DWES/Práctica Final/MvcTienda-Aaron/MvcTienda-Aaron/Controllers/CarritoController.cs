@@ -1,12 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcTienda_Aaron.Data;
 using MvcTienda_Aaron.Models;
+using System.Data;
 
 namespace MvcTienda_Aaron.Controllers
 {
+    [Authorize(Roles = "Usuario")]
     public class CarritoController : Controller
     {
+        
         private readonly MvcTienda_AaronContexto _context;
 
         public CarritoController(MvcTienda_AaronContexto context)
@@ -32,6 +36,7 @@ namespace MvcTienda_Aaron.Controllers
                                 .ThenInclude(x => x.Producto)
                                 .Include(x => x.Detalles)
                                 .ThenInclude(x => x.ProductoTalla)
+                                .ThenInclude(x => x.Talla)
                                 .FirstOrDefaultAsync(e => e.Id == intNumeroPedido);
 
             if (pedido == null)

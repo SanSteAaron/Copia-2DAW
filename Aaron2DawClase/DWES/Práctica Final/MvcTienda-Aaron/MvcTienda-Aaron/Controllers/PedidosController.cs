@@ -23,10 +23,14 @@ namespace MvcTienda_Aaron.Controllers
         }
 
         // GET: Pedidos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pagenumber)
         {
-            var mvcTienda_AaronContexto = _context.Pedidos.Include(p => p.Cliente).Include(p => p.Estado);
-            return View(await mvcTienda_AaronContexto.ToListAsync());
+            // Cargar datos de Pedidos
+            var mvcTienda_AaronContexto = from s in _context.Pedidos.Include(p => p.Cliente).Include(p => p.Estado)
+            select s;
+            int pageSize = 5;
+            return View(await PaginatedList<Pedido>.CreateAsync(mvcTienda_AaronContexto.AsNoTracking(),
+            pagenumber ?? 1, pageSize));
         }
 
         // GET: Pedidos/Details/5
