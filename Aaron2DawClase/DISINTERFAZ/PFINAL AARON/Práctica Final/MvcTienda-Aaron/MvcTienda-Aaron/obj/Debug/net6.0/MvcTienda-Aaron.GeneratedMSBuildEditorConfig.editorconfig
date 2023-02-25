@@ -1,0 +1,260 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MvcTienda_Aaron
+build_property.RootNamespace = MvcTienda_Aaron
+build_property.ProjectDir = D:\Aaron2DawClase\DWES\Práctica Final\MvcTienda-Aaron\MvcTienda-Aaron\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Aaron2DawClase\DWES\Práctica Final\MvcTienda-Aaron\MvcTienda-Aaron
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorías/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcsOtYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorías/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcsOtYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorías/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcsOtYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorías/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcsOtYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Categorías/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcsOtYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Detalles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Detalles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Detalles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Detalles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Detalles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Escaparate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYXBhcmF0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estados/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estados/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estado/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estado/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estado/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estado/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Estado/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Pedidos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Pedidos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Pedidos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Pedidos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Pedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Productos/CambiarImagen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENhbWJpYXJJbWFnZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Productos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Productos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Productos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Productos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Productos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/ProductoTallas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9UYWxsYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/ProductoTallas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9UYWxsYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/ProductoTallas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9UYWxsYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/ProductoTallas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9UYWxsYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/ProductoTallas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9UYWxsYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Tallas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Tallas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Tallas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Tallas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Tallas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Aaron2DawClase/DWES/Práctica Final/MvcTienda-Aaron/MvcTienda-Aaron/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8tidv31x9k

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MvcTienda_Aaron</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MvcTienda_Aaron.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="p-0">
+        <div class="container-fluid bg-brown text-white text-center mb-4 shadow ps-0 pe-0 pb-1">
+            <nav class="navbar navbar-light navbar-expand-xxl navbar-toggleable-xxl bg-white mb-1 p-4">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bolder ms-4" style="font-family:'Bookman Old Style' ;" asp-area="" asp-controller="Home" asp-action="Index">AS CLOTHING</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-xxl-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Privacy">Pólitica de privacidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
+                            </li>
+                            <li class="nav-item"> 
+                                <a class="nav-link  text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Detalles" asp-action="Index">Detalles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-dark" asp-area="" asp-controller="Estados" asp-action="Index">Estados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Pedidos" asp-action="Index">Pedidos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="ProductoTallas" asp-action="Index">Stock</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Tallas" asp-action="Index">Tallas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Escaparate" asp-action="Index">Escaparate</a>
+                            </li>
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>
+            <p class="text-white fw-lighter mt-3 ">ADQUIERE LO ÚLTIMO EN ACCESORIOS Y ROPA EN <b>AS CLOTHING</b></p>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            &copy; 2023 - AS Clothing - <a asp-area="" asp-controller="Home" asp-action="Privacy">Pólitica de privacidad</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

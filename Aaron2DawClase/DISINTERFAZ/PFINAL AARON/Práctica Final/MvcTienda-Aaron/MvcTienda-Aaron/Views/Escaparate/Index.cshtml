@@ -1,0 +1,67 @@
+﻿@model IEnumerable<MvcTienda_Aaron.Models.Producto>
+
+@{
+    ViewData["Title"] = "Indice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Escaparate</h1>
+<h4>@ViewBag.Categoria</h4>
+
+<main class="container-fluid">
+    <div class="row">
+        @*Categorias*@
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <table class="table">
+                @foreach (var i in ViewData["Listacategorias"] as IEnumerable<Categoria>)
+                {
+                    <tr>
+                        <td>
+                            <a asp-action="Index" asp-route-id="@i.Id">@i.Descripcion</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+        @*Tarjeta de productos*@
+        <div class="col-lg-9 col-md-12 col-sm-12">
+            <div class="card-columns">
+                @foreach (var item in Model)
+                {
+                    <div class="card shadow" style="width:240px; height:600px; text-align:center">
+                        <div>
+                            @{
+                                var nombreImagen = "error.png";
+                                if(item.Imagen != null)
+                                {
+                                    nombreImagen = item.Imagen;
+                                }
+                            }
+                            <img class="card-img-top" style="width:150px; height:150px; margin:10px;" src="~/images/@nombreImagen">
+                        </div>
+                        <div class="card-body" style="height:auto;">
+                            <p class="card-text" style="height:50px;">@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                            <h2>
+                                @item.PrecioCadena €
+                            </h2>
+                            <br/>
+                            <p class="fw-bold">Tallas Disponibles</p>
+                            @foreach (var talla in ViewData["Listatallas"] as IEnumerable<ProductoTalla>)
+                            {
+                                if(talla.ProductoId == item.Id)
+                                {
+                                    <p>@talla.Talla - @talla.Stock Disponibles</p>
+                                }               
+                            }
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="AñadirCarrito" asp-route-id="@item.Id" class="btn btn-outline-dark">Añadir al carrito</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</main>
+
