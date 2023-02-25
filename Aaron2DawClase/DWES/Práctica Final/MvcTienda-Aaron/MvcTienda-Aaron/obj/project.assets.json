@@ -10459,23 +10459,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aarsanste\\.nuget\\packages\\": {},
+    "C:\\Users\\psanl\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
+      "projectUniqueName": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
       "projectName": "MvcTienda-Aaron",
-      "projectPath": "D:\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
-      "packagesPath": "C:\\Users\\aarsanste\\.nuget\\packages\\",
-      "outputPath": "D:\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\obj\\",
+      "projectPath": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\MvcTienda-Aaron.csproj",
+      "packagesPath": "C:\\Users\\psanl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\aarsanste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\psanl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10484,7 +10484,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10549,7 +10548,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
