@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EobCtiKygH/HUE5ajGAU+cJoK8AeobEgGYM/Cy4tJcU=",
+  "Hash": "Gi0qbW37fw4oh4f7kJmoQCnE5X/RqWJNlqLoWxmJ9+w=",
   "Source": "MvcTienda-Aaron",
   "BasePath": "_content/MvcTienda-Aaron",
   "Mode": "Default",
@@ -1173,6 +1173,23 @@
       "OriginalItemSpec": "wwwroot\\images\\12.jpg"
     },
     {
+      "Identity": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\images\\12.webp",
+      "SourceId": "MvcTienda-Aaron",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\",
+      "BasePath": "_content/MvcTienda-Aaron",
+      "RelativePath": "images/12.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\12.webp"
+    },
+    {
       "Identity": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\images\\13.jpg",
       "SourceId": "MvcTienda-Aaron",
       "SourceType": "Discovered",
@@ -1343,6 +1360,23 @@
       "OriginalItemSpec": "wwwroot\\images\\4.jpg"
     },
     {
+      "Identity": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\images\\4.webp",
+      "SourceId": "MvcTienda-Aaron",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\",
+      "BasePath": "_content/MvcTienda-Aaron",
+      "RelativePath": "images/4.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4.webp"
+    },
+    {
       "Identity": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\images\\5.jpg",
       "SourceId": "MvcTienda-Aaron",
       "SourceType": "Discovered",
@@ -1409,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\images\\8.webp",
+      "SourceId": "MvcTienda-Aaron",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\",
+      "BasePath": "_content/MvcTienda-Aaron",
+      "RelativePath": "images/8.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8.webp"
     },
     {
       "Identity": "C:\\Users\\psanl\\Documents\\Copia-2DAW\\Aaron2DawClase\\DWES\\Práctica Final\\MvcTienda-Aaron\\MvcTienda-Aaron\\wwwroot\\images\\9.jpg",
